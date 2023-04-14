@@ -180,3 +180,41 @@ body{
 .botones-menu .btnN{
     margin-left: -9%;
 }
+
+/*ESTILOS DE IZQUIERDA*/
+.titu-izquierda{
+    font-size: 60px;
+    font-family:'Courier New', Courier, monospace;
+    margin-right: 40%;
+    color:  #002060;
+}
+
+.art1{
+    border: #A5A8F3 2px solid;
+    height: 2cm;
+    font-family:  Comic Sans MS;
+    color: black;
+}
+
+.color1{
+    background: #C0CFFB;
+}
+
+.contenedor p{
+    color: #002060;
+    font-size: 35px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: auto;
+}
+.audio-izq audio {
+
+}
+.img-izq img{
+    margin-top: -7cm;
+    margin-left: 12cm;
+    width: 700px;
+  
+}
