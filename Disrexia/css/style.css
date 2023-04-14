@@ -125,15 +125,23 @@
     margin-right: 40%;
 }
 
-.section{
-    background-color: #ACE7FF;
-}
 
 .contenedor-botones-lecciones{
     margin-top: 10%;
 }
 
 /*ESTILOS DE IZQUIERDA*/
+.section{
+   background-image: url(../img/fondo32.jpg);
+    height:84.6vh;
+    width:100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Courier;
+}
+
 .titu-izquierda{
     font-size: 60px;
     font-family:'Courier New', Courier, monospace;
@@ -151,20 +159,28 @@
 .color1{
     background: #C0CFFB;
 }
-
-.contenedor p{
-    color: #002060;
-    font-size: 35px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 20px;
-    flex: auto;
+.fondo{
+    background-color: #BDE4ED;
 }
 
-.img-izq img{
-    margin-top: -7cm;
-    margin-left: 12cm;
-    width: 700px;
 
+.img-izq img{
+    margin-top: -1.5cm;
+    margin-left: 6cm;
+    width: 870px;
+
+}
+.audio-izq audio{
+    margin-left: 6cm;
+}
+
+.boton-reg{
+    margin-left: 2cm;
+    margin-top: -3cm;
+    width: 1000px;
+}
+.boton-sig{
+    margin-top: -2.6cm;
+    width: 1000px;
+    margin-left: 29cm;
 }
