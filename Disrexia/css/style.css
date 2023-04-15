@@ -97,8 +97,6 @@
     background-size: cover;
     position: relative;
     font-family: Courier;
-    /* width: 100%;
-    height: 100%; */
 }
 
 .contenedor-logo{
@@ -116,13 +114,15 @@
 
 .contenedor-logo .rex{
     margin-left: 90%;
-    margin-top: -65%;
+    margin-top: -60%;
 }
 
 .titu{
     font-size: 60px;
     font-family:'Courier New', Courier, monospace;
-    margin-right: 40%;
+    margin-right: 18%;
+    margin-left: 25%;
+    color: #002060;
 }
 
 
@@ -133,8 +133,8 @@
 /*ESTILOS DE IZQUIERDA*/
 .bodyIzq{
     background-image: url(../img/fondo31.jpg);
-    height:97.5vh;
-    width:90vw;
+    height:100vh;
+    width:100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -150,38 +150,46 @@
     color:  #002060;
 }
 
-.art1{
-    border: #A5A8F3 2px solid;
-    height: 2cm;
-    font-family:  Comic Sans MS;
-    color: black;
+.audio-izq{
+    margin-left: 15cm;
+    margin-bottom: -cm;
 }
-
-.color1{
-    background: #C0CFFB;
-}
-.fondo{
-    background-color: #BDE4ED;
-}
-
 
 .img-izq img{
-    margin-top: -1.5cm;
-    margin-left: 6cm;
+    margin-bottom: 26cm;
+    margin-left: 9cm;
     width: 870px;
-
-}
-.audio-izq audio{
-    margin-left: 6cm;
 }
 
 .boton-reg img{
     margin-left: 2cm;
-    margin-top: -3cm;
+    margin-top: -5cm;
     width: 200px;
 }
 .boton-sig img{
-    margin-top: -4.3cm;
-    margin-left: 2cm;
+    margin-top: -6.2cm;
+    margin-left: 29cm;
     width: 200px;
+
+}
+
+
+/* ESTILOS DE MENU EJERCICIOS */
+.body3{
+    background-image: url(../img/fondo31.jpg);
+    height:100vh;
+    width:100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Courier;
+}
+
+.titu-menu-ejercicios{
+    font-size: 60px;
+    font-family:'Courier New', Courier, monospace;
+    margin-right: 18%;
+    margin-left: 23%;
+    color: #002060;
 }
