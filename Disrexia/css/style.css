@@ -131,16 +131,17 @@
 }
 
 /*ESTILOS DE IZQUIERDA*/
-.section{
-   background-image: url(../img/fondo32.jpg);
-    height:84.6vh;
-    width:100vw;
+.bodyIzq{
+    background-image: url(../img/fondo31.jpg);
+    height:97.5vh;
+    width:90vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     font-family: Courier;
 }
+
 
 .titu-izquierda{
     font-size: 60px;
@@ -174,13 +175,13 @@
     margin-left: 6cm;
 }
 
-.boton-reg{
+.boton-reg img{
     margin-left: 2cm;
     margin-top: -3cm;
-    width: 1000px;
+    width: 200px;
 }
-.boton-sig{
-    margin-top: -2.6cm;
-    width: 1000px;
-    margin-left: 29cm;
+.boton-sig img{
+    margin-top: -4.3cm;
+    margin-left: 2cm;
+    width: 200px;
 }
