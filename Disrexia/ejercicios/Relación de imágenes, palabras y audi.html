@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Practicando lectura y escritura de letras</title>
+	<style>
+		/* Estilos CSS */
+        .boton-imagen {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  border-radius: 0 5px 0 0;
+  text-decoration: none;
+}
+
+.boton-imagen img {
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+
+        .boton {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 5px 0 0 0;
+}
+
+        body {
+    background-image: url("imagenes/fondo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+		body {
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		img {
+  display: block;
+  margin: 0 auto;
+  width: 100px; /* ajusta el tamaño de la imagen a 200 píxeles de ancho */
+}
+		input[type="text"] {
+			display: block;
+			margin: 0 auto 20px;
+			font-size: 18px;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+		}
+		input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			background-color: #008CBA;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #005F6B;
+		}
+	</style>
+</head>
+<body>
+	<h1>Practicando lectura y escritura de letras</h1>
+	<p>Por favor, escribe la letra correcta para cada imagen, pulsa la imagen para escuchar su sonido:</p>
+	<!-- Audio para cada letra -->
+	<audio id="audio_b" src="sounds/b.mp3"></audio>
+	<audio id="audio_d" src="sounds/d.mp3"></audio>
+	<audio id="audio_p" src="sounds/p.mp3"></audio>
+	<audio id="audio_q" src="sounds/q.mp3"></audio>
+	<!-- Imágenes y campos de texto de ejemplo -->
+	<img src="imagenes/btn-letrabL.png" alt="Imagen de letra b" onclick="document.getElementById('audio_b').play()">
+	<input type="text" name="letra_b" id="letra_b">
+	<img src="imagenes/btn-letradL.png" alt="Imagen de letra d" onclick="document.getElementById('audio_d').play()">
+	<input type="text" name="letra_d" id="letra_d">
+	<img src="imagenes/btn-letrapL.png" alt="Imagen de letra p" onclick="document.getElementById('audio_p').play()">
+	<input type="text" name="letra_p" id="letra_p">
+	<img src="imagenes/btn-letraqL.png" alt="Imagen de letra q" onclick="document.getElementById('audio_q').play()">
+	<input type="text" name="letra_q" id="letra_q">
+	<!-- Botón de envío del formulario -->
+	<input type="submit" value="Comprobar" onclick="verificarRespuestas()">	
+	<!-- Script de JavaScript -->
+	<script>
+		function verificarRespuestas() {
+	// Obtener las respuestas del usuario
+	var letra_b = document.getElementById("letra_b").value.toLowerCase();
+	var letra_d = document.getElementById("letra_d").value.toLowerCase();
+	var letra_p = document.getElementById("letra_p").value.toLowerCase();
+	var letra_q = document.getElementById("letra_q").value.toLowerCase();
+	// Verificar si las respuestas son correctas
+	if (letra_b === "b" && letra_d === "d" && letra_p === "p" && letra_q === "q") {
+		alert("¡Muy bien, todas las respuestas son correctas!");
+		// Redirigir al usuario a otro HTML
+		window.location.href = "menuEjercicios.html";
+	} else {
+		alert("Al menos una respuesta es incorrecta. ¡Inténtalo de nuevo!");
+	}
+}
+
+</script>
+</body>
+</html>

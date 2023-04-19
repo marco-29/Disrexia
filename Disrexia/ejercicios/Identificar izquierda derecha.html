@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Identificación de la izquierda y derecha</title>
+	<style>
+            body {
+    background-image: url("imagenes/fondo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+		div {
+		  max-width: 500px;
+		  margin: auto;
+		  text-align: center;
+		}
+
+		p {
+		  font-size: 1.2rem;
+		  font-weight: bold;
+		}
+
+		button {
+		  background-color: #008CBA;
+		  border: none;
+		  color: white;
+		  padding: 10px 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 10px;
+		  cursor: pointer;
+		}
+
+		img {
+		  width: 100%;
+		  max-width: 300px;
+		}
+
+		#respuesta {
+		  font-size: 1.2rem;
+		  font-weight: bold;
+		  margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Identifica tu izquierda y derecha:</p>
+		<img id="imagen-mano" src="" alt="Imagen de una mano">
+		<br>
+		<button id="izquierda">Izquierda</button>
+		<button id="derecha">Derecha</button>
+		<p id="respuesta"></p>
+	</div>
+	
+	<script>
+		let contadorRespuestasCorrectas = 0;
+
+const btnIzquierda = document.getElementById('izquierda');
+const btnDerecha = document.getElementById('derecha');
+const respuesta = document.getElementById('respuesta');
+const imagenMano = document.getElementById('imagen-mano');
+
+const imagenesMano = [
+  'imagenes/imagen_mano_izquierda.png',
+  'imagenes/imagen_mano_derecha.png'
+];
+
+function mostrarManoAleatoria() {
+  const indice = Math.floor(Math.random() * imagenesMano.length);
+  const mano = imagenesMano[indice];
+  imagenMano.src = mano;
+  return indice; // devuelve el índice de la imagen mostrada
+}
+
+const respuestaCorrecta = {
+  0: 'izquierda', // imagen de mano izquierda
+  1: 'derecha' // imagen de mano derecha
+};
+
+function verificarRespuesta(respuestaUsuario, indiceImagen) {
+  const respuestaEsperada = respuestaCorrecta[indiceImagen];
+  if (respuestaUsuario === respuestaEsperada) {
+    respuesta.innerHTML = 'Respuesta: ¡Correcto!';
+    contadorRespuestasCorrectas++; // incrementar el contador de respuestas correctas
+    if (contadorRespuestasCorrectas === 5) {
+      window.location.href = 'completar palabras.html'; // redireccionar a otro archivo HTML
+    }
+  } else {
+    respuesta.innerHTML = 'Respuesta: Incorrecto. Intentalo de nuevo.';
+  }
+}
+
+let indiceImagenActual = mostrarManoAleatoria();
+
+btnIzquierda.addEventListener('click', function() {
+  verificarRespuesta('izquierda', indiceImagenActual);
+  indiceImagenActual = mostrarManoAleatoria(); // mostramos una nueva imagen aleatoria
+});
+
+btnDerecha.addEventListener('click', function() {
+  verificarRespuesta('derecha', indiceImagenActual);
+  indiceImagenActual = mostrarManoAleatoria(); // mostramos una nueva imagen aleatoria
+});
+
+	</script>
+</body>
+</html>
+

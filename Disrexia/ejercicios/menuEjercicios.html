@@ -5,15 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="../css/estilo-menuEjercicios.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="shortcut icon" href="../img/rex.gif" type="image/x-icon" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
 </head>
-<body>
+<body class="body3">
+  <style>
+ .boton-imagen {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 300px;
+  border-radius: 0 5px 0 0;
+  text-decoration: none;
+}
+
+.boton-imagen img {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+  </style>
     <script src="../js/jquery-3.6.3.min.js"></script>
+    <a href="Identificar sonidos.html" class="boton-imagen">
+      <img src="imagenes/start.png" alt="Descripción de la imagen">
+    </a>
+    
     <script src="../js/bootstrap.js"></script>
     
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #102060">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #77dd77">
       <div class="container-fluid" style="height: 80px">
         <a class="contenedor-logo" href="../index.html">
           <div class="texto">
@@ -40,22 +63,5 @@
         </ul>
       </div>
     </nav>
-    <div class="contenedor">
-      <a href="lateralidad.html" class="btnmanos"
-        ><img src="../img/btn-lateralidad.png" alt="manos" width="19%"
-      /></a>
-      <a href="lateralidad.html" class="btnb"
-        ><img src="../img/btn-letrab.png" alt="manos" width="19%"
-      /></a>
-      <a href="lateralidad.html" class="btnd"
-        ><img src="../img/btn-letrad.png" alt="manos" width="19%"
-      /></a>
-      <a href="lateralidad.html" class="btnp"
-        ><img src="../img/btn-letrap.png" alt="manos" width="19%"
-      /></a>
-      <a href="lateralidad.html" class="btnqs"
-        ><img src="../img/btn-letraq.png" alt="manos" width="19%"
-      /></a>
-    </div>
 </body>
 </html>

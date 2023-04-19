@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Ejercicio de escritura de letras</title>
+	<style>
+        .boton-imagen img {
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+.boton {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 5px 0 0 0;
+  right: auto;
+}
+            body {
+    background-image: url("imagenes/fondo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		#palabra {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 50px auto;
+			font-size: 4rem;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		#opciones {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 50px auto;
+			font-size: 2rem;
+		}
+
+		.opcion {
+			background-color: #008CBA;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		#respuesta {
+			font-size: 1.2rem;
+			font-weight: bold;
+			margin-top: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ejercicio de escritura de letras</h1>
+
+	<div id="palabra"></div>
+
+	<div id="opciones">
+		<button class="opcion">b</button>
+		<button class="opcion">d</button>
+		<button class="opcion">p</button>
+		<button class="opcion">q</button>
+	</div>
+
+	<p id="respuesta"></p>
+
+	<script>
+		const palabras = [
+    'pelota',
+    'barco',
+    'quedo',
+    'pato',
+    'bandera',
+    'dientes',
+    'queso',
+    'perro',
+    'botella',
+    'dedo'
+];
+
+const opciones = document.querySelectorAll('.opcion');
+const respuesta = document.getElementById('respuesta');
+let palabraActual = '';
+let letrasFaltantes = [];
+let palabrasCompletadas = 0; // Nueva variable para llevar la cuenta de las palabras completadas
+
+function mostrarPalabra() {
+    // Seleccionar una palabra aleatoria de la matriz
+    palabraActual = palabras[Math.floor(Math.random() * palabras.length)];
+    // Crear una matriz de letras faltantes
+    letrasFaltantes = palabraActual.split('').map(function(letra) {
+        if (['b', 'd', 'p', 'q'].includes(letra)) {
+            return '_';
+        }
+        return letra;
+    });
+    // Mostrar la palabra en la pantalla
+    document.getElementById('palabra').innerHTML = letrasFaltantes.join('');
+}
+
+function verificarPalabra() {
+    // Verificar si todas las letras están completas
+    if (!letrasFaltantes.includes('_')) {
+        if (letrasFaltantes.join('') === palabraActual) {
+            respuesta.innerHTML = '¡Correcto!';
+            palabrasCompletadas++; // Incrementar la variable de palabras completadas
+            if (palabrasCompletadas === 5) { // Si se completan 5 palabras correctamente
+                window.location.href = 'Relación de imágenes, palabras y audi.html'; // Pasar a otro HTML
+            }
+        } else {
+            respuesta.innerHTML = 'Incorrecto. Inténtalo de nuevo.';
+        }
+        mostrarPalabra();
+    }
+}
+
+function completarLetra(letra) {
+    // Completar todas las apariciones de la letra en la matriz de letras faltantes
+    for (let i = 0; i < palabraActual.length; i++) {
+        if (palabraActual[i] === letra) {
+            letrasFaltantes[i] = letra;
+        }
+    }
+    // Actualizar la palabra en la pantalla
+    document.getElementById('palabra').innerHTML = letrasFaltantes.join('');
+    // Verificar si se ha completado la palabra
+    verificarPalabra();
+}
+
+// Inicializar el ejercicio mostrando la primera palabra
+mostrarPalabra();
+
+// Agregar un controlador de eventos a cada botón de opción
+opciones.forEach(function(opcion) {
+    opcion.addEventListener('click', function() {
+        completarLetra(this.innerHTML);
+    });
+});
+
+</script>
+</body>
+</html>

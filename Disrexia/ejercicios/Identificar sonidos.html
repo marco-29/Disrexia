@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de Identificación de Sonidos de Letras</title>
+    <style>
+                 body {
+    background-image: url("imagenes/fondo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .letters-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .letter {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .letter.b {
+            background-color: #00ff00;
+        }
+
+        .letter.d {
+            background-color: #ff9900;
+        }
+
+        .letter.p {
+            background-color: #9900ff;
+        }
+
+        .letter.q {
+            background-color: #ff0000;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio de Identificación de Sonidos de Letras</h1>
+        <div class="letters-container">
+            <div class="letter b">
+                <button onclick="playSound('b')">B,b</button>
+            </div>
+            <div class="letter d">
+                <button onclick="playSound('d')">D,d</button>
+            </div>
+            <div class="letter p">
+                <button onclick="playSound('p')">P,p</button>
+            </div>
+            <div class="letter q">
+                <button onclick="playSound('q')">Q,q</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var audioCount = 0;
+        function playSound(letter) {
+            var audio = new Audio('sounds/' + letter + '.mp3');
+            audio.play();
+            audio.addEventListener('ended', function() {
+                audioCount++;
+                if (audioCount == 4) {
+                    window.location.href = 'identifica letra.html';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
