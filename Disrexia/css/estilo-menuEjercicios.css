@@ -1,0 +1,58 @@
+body{
+    background-image: url(../img/fondo31.jpg);
+    height:100vh;
+    width:100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Courier;
+}
+
+.contenedor-logo{
+    /* background-color: #002060; */
+    text-decoration: none;
+    height: 50px;
+}
+
+.contenedor-logo .texto{
+    color: #77dd77;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.contenedor-logo .rex{
+    margin-left: 90%;
+    margin-top: -60%;
+}
+
+.titu{
+    font-size: 60px;
+    font-family:'Courier New', Courier, monospace;
+    margin-right: 18%;
+    margin-left: 25%;
+    color: #77dd77;
+}
+
+.titu-menu-ejercicios{
+    font-size: 60px;
+    font-family:'Courier New', Courier, monospace;
+    margin-right: 18%;
+    margin-left: 23%;
+    color: #77dd77;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+.btnmanos {
+    transition: transform 450ms;
+    will-change: transform;
+}
+  
+.btnmanos:hover {
+    transition: transform 125ms;
+    transform: translateY(-10px);
+}
