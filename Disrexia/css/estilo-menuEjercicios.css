@@ -7,52 +7,146 @@ body{
     background-size: cover;
     position: relative;
     font-family: Courier;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    background-color: #002060;
+    background-image: url(../img/restos1.jpg);
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 150%;
 }
 
 .contenedor-logo{
-    /* background-color: #002060; */
-    text-decoration: none;
-    height: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
-.contenedor-logo .texto{
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 150%;
     color: #77dd77;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
 }
-
-.contenedor-logo .rex{
-    margin-left: 90%;
-    margin-top: -60%;
+.logo img{
+    width: 150px;
+    margin-right: 30px;
 }
 
 .titu{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 18%;
+    display: flex;
+    flex-direction: column;
+    font-size: 250%;
+    color: #77dd77;
     margin-left: 25%;
-    color: #77dd77;
 }
 
-.titu-menu-ejercicios{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 18%;
-    margin-left: 23%;
-    color: #77dd77;
+nav{
+    display: flex;
+    flex-direction: row;
 }
 
-.contenedor{
-    width: 100%;
+.body2 .boton-lecciones{
+    width: 50%;
+    height: 20%;
 }
 
-.btnmanos {
-    transition: transform 450ms;
-    will-change: transform;
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+    color: white;
 }
-  
-.btnmanos:hover {
-    transition: transform 125ms;
-    transform: translateY(-10px);
+
+nav a:hover{
+    color: #49B19D;
 }
+
+@media (max-width: 758px){
+    header{
+        flex-direction: row;
+        font-size: 75%;
+    }
+    .contenedor-logo{
+        flex-direction: row;
+        margin-left: -5%;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    .titu{
+        margin-left: 4%;
+    }
+    .logo img{
+        width: 130px;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 720px){
+    header{
+        flex-direction: column;
+        font-size: 80%;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    .titu{
+        margin-left: 15%;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 520px){
+    header{
+        flex-direction: column;
+        font-size: 50%;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    .titu{
+        margin-left: 0%;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+    .contenedor img{
+        margin-top: 100%;
+        width: 90%;
+    }
+}
+
+.boton-imagen {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 0 5px 0 0;
+    text-decoration: none;
+  }
+
+  .boton-imagen img {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }

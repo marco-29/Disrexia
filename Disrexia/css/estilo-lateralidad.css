@@ -7,32 +7,135 @@ body{
     background-size: cover;
     position: relative;
     font-family: Courier;
+    margin: 0;
 }
 
-.contenedor-logo{
-    /* background-color: #002060; */
+header{
+    display: flex;
+    background-color: #77dd77;
+    /* min-height: 1px; */
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+a{
     text-decoration: none;
-    height: 50px;
+    font-size: 150%;
 }
 
-.contenedor-logo .texto{
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 150%;
     color: #002060;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+}
+.logo img{
+    width: 100px;
+    margin-right: 10px;
 }
 
-.contenedor-logo .rex{
-    margin-left: 90%;
-    margin-top: -60%;
-}
-
-.titu{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 18%;
+h1{
+    display: flex;
+    flex-direction: column;
+    font-size: 250%;
+    color: #002060;
     margin-left: 25%;
-    color: #002060;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.body2 .boton-lecciones{
+    width: 50%;
+    height: 20%;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+    color: white;
+}
+
+nav a:hover{
+    color: #49B19D;
+}
+
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contenedor img{
+    transition: transform 0.32s ease-in-out;
+    width: 80%;
+}
+
+.contenedor img:hover{
+    transform: translateY(-20px);
+}
+
+@media (max-width: 758px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    h1{
+        margin-left: 0%;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+        font-size: 80%;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    h1{
+        margin-left: 0%;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px){
+    header{
+        flex-direction: column;
+        font-size: 50%;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    h1{
+        margin-left: 0%;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+    .contenedor img{
+        margin-top: 100%;
+        width: 90%;
+    }
 }
 
 .contenedor-leccion img{

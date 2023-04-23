@@ -8,19 +8,17 @@
     background-size: cover;
     position: relative;
     font-family: Courier;
+    display: flex;
+    align-items: center;
     /* width: 100%;
     height: 100%; */
 }
 
 .contenedor{
-    /* width: 100%;
-    border-radius: 10px;
-    padding: 10px 20px;
-    box-sizing: border-box; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    margin-left: 10%;
 }
 
 .contenedor .presentacion{
@@ -37,12 +35,10 @@
     margin-left: 20%;
 }
 
-.contenedor .presentacion .instrucciones h1{
-    margin-top: 15%;
-    margin-right: -8%;
-}
 .contenedor .presentacion .instrucciones img{
-    width: 80%;
+    width: 70%;
+    margin-left: -2%;
+    margin-top: -1%;
 }
 
 
@@ -50,6 +46,7 @@
     margin-left: 2%;
     display: flex;
     flex-direction: row;
+    margin-top: -2%;
 }
 
 
@@ -85,9 +82,9 @@
 }
 
 @media (max-width: 758px){
-    /* .contenedor{
-        margin-top: 10%;
-    } */
+    .contenedor{
+        margin-left: -10%;
+    }
 
     .contenedor .presentacion .instrucciones{
         flex-direction: column;
@@ -138,111 +135,4 @@
     .contenedor .presentacion .botones .ejercicios{
         width: 70%;
     }
-}
-
-/*ESTILOS DE MENU LECCIONES*/
-.body2{
-    background-image: url(../img/fondo31.jpg);
-    height:100vh;
-    width:100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    font-family: Courier;
-}
-
-.contenedor-logo{
-    /* background-color: #002060; */
-    text-decoration: none;
-    height: 50px;
-}
-
-.contenedor-logo .texto{
-    color: #002060;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-}
-
-.contenedor-logo .rex{
-    margin-left: 90%;
-    margin-top: -60%;
-}
-
-.titu{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 18%;
-    margin-left: 25%;
-    color: #002060;
-}
-
-
-.contenedor-botones-lecciones{
-    margin-top: 10%;
-}
-
-/*ESTILOS DE IZQUIERDA*/
-.bodyIzq{
-    background-image: url(../img/fondo31.jpg);
-    height:100vh;
-    width:100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    font-family: Courier;
-}
-
-
-.titu-izquierda{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 40%;
-    color:  #002060;
-}
-
-.audio-izq{
-    margin-left: 15cm;
-    margin-bottom: -cm;
-}
-
-.img-izq img{
-    margin-bottom: 26cm;
-    margin-left: 9cm;
-    width: 870px;
-}
-
-.boton-reg img{
-    margin-left: 2cm;
-    margin-top: -5cm;
-    width: 200px;
-}
-.boton-sig img{
-    margin-top: -6.2cm;
-    margin-left: 29cm;
-    width: 200px;
-
-}
-
-
-/* ESTILOS DE MENU EJERCICIOS */
-.body3{
-    background-image: url(../img/fondo31.jpg);
-    height:100vh;
-    width:100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    font-family: Courier;
-}
-
-.titu-menu-ejercicios{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 18%;
-    margin-left: 23%;
-    color: #002060;
 }
