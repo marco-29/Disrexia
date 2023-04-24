@@ -12,7 +12,6 @@ body{
 
 header{
     display: flex;
-    /* background-color: #77dd77; */
     background-image: url(../img/restos1.jpg);
     height: 80px;
     justify-content: space-between;
