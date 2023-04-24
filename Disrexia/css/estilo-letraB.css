@@ -1,0 +1,76 @@
+body{
+    background-image: url(../img/fondo31.jpg);
+    height:100vh;
+    width:100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Courier;
+}
+
+.contenedor-logo{
+    /* background-color: #002060; */
+    text-decoration: none;
+    height: 50px;
+}
+
+.contenedor-logo .texto{
+    color: #002060;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.contenedor-logo .rex{
+    margin-left: 90%;
+    margin-top: -60%;
+}
+
+.titu{
+    font-size: 10px;
+    font-family:'Courier New', Courier, monospace;
+    margin-right: 18%;
+    margin-left: 25%;
+    color: #002060;
+}
+
+.contenedor-leccion img{
+    margin-left: 19%;
+}
+
+.contenedor-letra img{
+    margin-top: -39%;
+    margin-left: 35%;
+}
+
+.botones{
+    width: 74vw;
+    margin-left: 15%;
+    margin-top: -12%;
+}
+
+.botones .regresar{
+    margin-left: -20%;
+    margin-top: -12%;
+}
+
+.botones .siguiente{
+    margin-left: 85%;
+    margin-top: -12%;
+}
+
+.audio{
+    margin-left: 30%;
+    margin-top: -25%;
+}
+
+.audio1{
+    margin-left: 36%;
+    margin-top: -35%;
+}
+.audio2{
+    margin-left: 20%;
+    margin-top: -11%;
+}
+
