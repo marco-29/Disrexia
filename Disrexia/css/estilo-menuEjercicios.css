@@ -16,7 +16,7 @@ header{
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 a{
@@ -44,47 +44,110 @@ a{
     display: flex;
     flex-direction: column;
     font-size: 250%;
-    color: #77dd77;
+    color: green;
     margin-left: 40%;
 }
 
 nav{
     display: flex;
     flex-direction: row;
+    margin-left: 35%;
 }
 
-.body2 .boton-lecciones{
-    width: 50%;
-    height: 20%;
+.boton-lecciones img{
+    transition: transform .2s;
+    width: 60%;
+    padding: 1%;
+}
+.boton-lecciones img:hover{
+    transform: scale(1.5);
+    /* background-color: #002060; */
+    border-radius: 40%;
+}
+
+.boton-ejercicios img{
+    transition: transform .2s;
+    width: 53%;
+}
+.boton-ejercicios img:hover{
+    transform: scale(1.5);
+    /* background-color: green; */
+    border-radius: 40%;
 }
 
 nav a{
     font-weight: 600;
     padding-right: 10px;
-    color: white;
+    color:green;
 }
 
 nav a:hover{
     color: #49B19D;
 }
 
-@media (max-width: 758px){
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contenedor img{
+    transition: transform 0.32s ease-in-out;
+    width: 80%;
+}
+
+.contenedor img:hover{
+    transform: translateY(-20px);
+}
+
+@media (max-width: 900px){
     header{
         flex-direction: row;
         font-size: 75%;
     }
     .contenedor-logo{
         flex-direction: row;
-        margin-left: -5%;
+        margin-left: -30%;
+        margin-top: -5%;
+    }
+    .contenedor-logo .titu{
+        margin-left: 10%;
+    }
+    .logo img{
+        width: 130px;
+    }
+    nav{
+        flex-direction: row;
+        margin-left: 80%;
+        margin-top: -30%;
+        /* padding: 10px 0px; */
+    }
+    .boton-lecciones img{
+        width: 90%;
+        padding: 1%;
+    }
+    .boton-ejercicios img{
+        width: 73%;
+    }
+    .contenedor{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 758px){
+    header{
+        flex-direction: column;
+        font-size: 80%;
     }
     nav{
         padding: 10px 0px;
     }
     .titu{
-        margin-left: 4%;
+        margin-left: 15%;
     }
     .logo img{
-        width: 130px;
+        width: 100px;
     }
     .contenedor{
         flex-direction: row;
@@ -132,20 +195,3 @@ nav a:hover{
         width: 90%;
     }
 }
-
-.boton-imagen {
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border-radius: 0 5px 0 0;
-    text-decoration: none;
-  }
-
-  .boton-imagen img {
-    display: block;
-    width: 300px;
-    height: 300px;
-  }

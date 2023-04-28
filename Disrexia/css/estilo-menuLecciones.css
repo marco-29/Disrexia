@@ -51,17 +51,34 @@ a{
 nav{
     display: flex;
     flex-direction: row;
+    margin-left: 35%;
 }
 
-.body2 .boton-lecciones{
-    width: 50%;
-    height: 20%;
+.boton-lecciones img{
+    transition: transform .2s;
+    width: 60%;
+    padding: 1%;
+}
+.boton-lecciones img:hover{
+    transform: scale(1.5);
+    /* background-color: #002060; */
+    border-radius: 40%;
+}
+
+.boton-ejercicios img{
+    transition: transform .2s;
+    width: 53%;
+}
+.boton-ejercicios img:hover{
+    transform: scale(1.5);
+    /* background-color: green; */
+    border-radius: 40%;
 }
 
 nav a{
     font-weight: 600;
     padding-right: 10px;
-    color: white;
+    color: #002060;
 }
 
 nav a:hover{
