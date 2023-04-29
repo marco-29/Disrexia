@@ -3,6 +3,20 @@
 <head>
 	<title>Ejercicio de escritura de letras</title>
 	<style>
+        /* Hacer la página responsive */
+@media screen and (max-width: 600px) {
+  #opciones {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .opcion {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
         .boton-imagen img {
   display: block;
   width: 90px;
@@ -71,6 +85,20 @@
 			margin-top: 20px;
 			text-align: center;
 		}
+
+		/* Hacer la página responsive */
+		@media screen and (max-width: 600px) {
+			#opciones {
+				flex-direction: column;
+				margin: 20px auto;
+			}
+
+			.opcion {
+				margin: 5px;
+				padding: 5px 10px;
+				font-size: 14px;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -84,6 +112,9 @@
 		<button class="opcion">p</button>
 		<button class="opcion">q</button>
 	</div>
+
+	
+
 
 	<p id="respuesta"></p>
 

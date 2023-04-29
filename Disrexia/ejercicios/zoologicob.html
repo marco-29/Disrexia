@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de identificación de letras</title>
+    <style>
+        body {
+            background-image: url("imagenes/zoologico.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #description {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #letter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            padding: 20px;
+        }
+
+        .letter {
+            width: 150px;
+            height: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            margin: 10px;
+            position: absolute;
+        }
+
+        .letter-b {
+            background-image: url("imagenes/b.png");
+            top: 25%;
+            left: 10%;
+        }
+
+        .letter-d {
+            background-image: url("imagenes/d.png");
+            top: 65%;
+            left: 40%;
+        }
+
+        .letter-p {
+            background-image: url("imagenes/p.png");
+            top: 30%;
+            right: 20%;
+        }
+
+        .letter-q {
+            background-image: url("imagenes/q.png");
+            top: 70%;
+            right: 10%;
+        }
+
+        #b-count {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encuentra la letra "b" o el burro en el zoologico </h1>
+    <audio id="description-audio" autoplay controls>
+        <source src="sonidos/encuentrab.mp3" type="audio/mpeg">
+    </audio>
+    <div id="letter-container">
+        <div class="letter letter-b" onclick="playSound('b')"></div>
+        <div class="letter letter-d" onclick="playSound('d')"></div>
+        <div class="letter letter-p" onclick="playSound('p')"></div>
+        <div class="letter letter-q" onclick="playSound('q')"></div>
+    </div>
+    <div id="b-count">B: <span id="count">0</span>/5</div>
+
+    <audio id="b-audio">
+        <source src="sonidos/burro.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="d-audio">
+        <source src="sonidos/delfin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="p-audio">
+        <source src="sonidos/pato.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="q-audio">
+        <source src="sonidos/quetzal.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        let bCount = 0;
+        const countSpan = document.getElementById("count");
+
+        function playSound(letter) {
+            const audioElement = document.getElementById(`${letter}-audio`);
+            audioElement.play();
+
+            if (letter === 'b') {
+                bCount++;
+                countSpan.innerHTML = bCount;
+
+                if (bCount >= 5) {
+
+                    alert("Felicidades, has identificado la letra 'b'.");
+                    window.location.href = "siguiente.html";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
