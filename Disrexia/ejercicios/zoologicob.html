@@ -51,8 +51,8 @@
 
         .letter-d {
             background-image: url("imagenes/d.png");
-            top: 65%;
-            left: 40%;
+            top: 70%;
+            right: 10%;
         }
 
         .letter-p {
@@ -63,8 +63,8 @@
 
         .letter-q {
             background-image: url("imagenes/q.png");
-            top: 70%;
-            right: 10%;
+            top: 65%;
+            left: 40%;
         }
 
         #b-count {
@@ -85,7 +85,7 @@
         <div class="letter letter-p" onclick="playSound('p')"></div>
         <div class="letter letter-q" onclick="playSound('q')"></div>
     </div>
-    <div id="b-count">B: <span id="count">0</span>/5</div>
+    <div id="b-count">B: <span id="count">0</span>/3</div>
 
     <audio id="b-audio">
         <source src="sonidos/burro.mp3" type="audio/mpeg">
@@ -112,7 +112,7 @@
                 bCount++;
                 countSpan.innerHTML = bCount;
 
-                if (bCount >= 5) {
+                if (bCount >= 3) {
 
                     alert("Felicidades, has identificado la letra 'b'.");
                     window.location.href = "siguiente.html";
