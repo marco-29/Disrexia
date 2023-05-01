@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Juego de objetos</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-image: url(../imagenes/zoologico.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			#contenedor {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			#audio-btn {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				background-color: white;
+				padding: 10px;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			#texto {
+				font-size: 36px;
+				font-weight: bold;
+				color: white;
+				text-align: center;
+				margin-top: 50px;
+			}
+			#objeto {
+				width: 300px;
+				height: 300px;
+				background-position: center;
+				background-size: cover;
+				border-radius: 50%;
+				margin-top: 50px;
+				cursor: pointer;
+			}
+			.opcion {
+				display: inline-block;
+				background-color: white;
+				padding: 10px;
+				border-radius: 5px;
+				margin: 10px;
+				cursor: pointer;
+			}
+			.opcion:hover {
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body onload="reproducirAudio()">
+		<div id="contenedor">
+			<div id="audio-btn" onclick="reproducirAudio()">Reproducir audio</div>
+			<div id="texto">busca la palabra escrita correctamente</div>
+			<div id="objeto"></div>
+			<div id="opciones">
+				<div class="opcion" onclick="verificarRespuesta(this)"></div>
+				<div class="opcion" onclick="verificarRespuesta(this)"></div>
+				<div class="opcion" onclick="verificarRespuesta(this)"></div>
+				<div class="opcion" onclick="verificarRespuesta(this)"></div>
+			</div>
+		</div>
+		<script>
+			var objetos = [
+    {
+        nombre: "bicicleta",
+        imagen: "bicicleta.jpg",
+        audio: "../sonidos/bicicleta.mp3",
+        respuesta: "bicicleta",
+        incorrectas: ["picicleta", "qicicleta", "dicicleta"]
+    },
+    {
+        nombre: "burro",
+        imagen: "../imagenes/b.png",
+        audio: "../sonidos/burro.mp3",
+        respuesta: "burro",
+        incorrectas: ["purro", "qurro", "durro"]
+    },
+    {
+        nombre: "barco",
+        imagen: "barco.jpg",
+        audio: "../sonidos/barco.mp3",
+        respuesta: "barco",
+        incorrectas: ["parco", "darco", "qarco"]
+    },
+    {
+        nombre: "ballena",
+        imagen: "ballena.jpg",
+        audio: "../sonidos/ballena.mp3",
+        respuesta: "ballena",
+        incorrectas: ["dallena", "pallena", "qallena"]
+    },
+    {
+        nombre: "binoculares",
+        imagen: "binoculares.jpg",
+        audio: "../sonidos/binoculares.mp3",
+        respuesta: "binoculares",
+        incorrectas: ["dinoculares", "pinoculares", "qinoculares"]
+    }
+]
+
+		var indiceObjetoActual = 0;
+		var respuestasCorrectas = 0;
+
+		function reproducirAudio() {
+			var audio = new Audio("../sonidos/buscab.mp3");
+			audio.play();
+		}
+
+		function seleccionarObjetoAleatorio() {
+			var indice = Math.floor(Math.random() * objetos.length);
+			var objeto = objetos[indice];
+			indiceObjetoActual = indice;
+			return objeto;
+		}
+
+		function mostrarObjeto(objeto) {
+  var objetoEl = document.getElementById("objeto");
+  objetoEl.style.backgroundImage = "url(" + objeto.imagen + ")";
+  
+  var audio = new Audio(objeto.audio);
+  audio.play();
+  
+  objetoEl.onclick = function() {
+    audio.play();
+  };
+}
+
+
+
+		function mostrarOpciones(objeto) {
+			var opcionesEl = document.getElementById("opciones");
+			var respuestasIncorrectas = objeto.incorrectas.filter(function(respuesta) {
+				return respuesta !== objeto.respuesta;
+			});
+			respuestasIncorrectas = shuffle(respuestasIncorrectas);
+			respuestasIncorrectas.length = 3;
+			var opciones = [objeto.respuesta].concat(respuestasIncorrectas);
+			opciones = shuffle(opciones);
+			var opcionEls = document.getElementsByClassName("opcion");
+			for (var i = 0; i < opcionEls.length; i++) {
+				opcionEls[i].innerHTML = opciones[i];
+			}
+		}
+
+		function verificarRespuesta(opcionEl) {
+			var respuesta = opcionEl.innerHTML;
+			var objeto = objetos[indiceObjetoActual];
+			if (respuesta === objeto.respuesta) {
+				respuestasCorrectas++;
+				if (respuestasCorrectas === 3) {
+					alert("¡Correcto! Pasas al siguiente nivel.");
+                    window.location.href = "victoria.html";
+					respuestasCorrectas = 0;
+				}
+			}
+			var objetoNuevo = seleccionarObjetoAleatorio();
+			mostrarObjeto(objetoNuevo);
+			mostrarOpciones(objetoNuevo);
+		}
+
+		function shuffle(array) {
+			for (var i = array.length - 1; i > 0; i--) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+			return array;
+		}
+
+		var objetoInicial = seleccionarObjetoAleatorio();
+		mostrarObjeto(objetoInicial);
+		mostrarOpciones(objetoInicial);
+	</script>
+</body>
+</html>
