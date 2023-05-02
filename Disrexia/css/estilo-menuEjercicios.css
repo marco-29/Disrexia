@@ -13,7 +13,7 @@ body{
 header{
     display: flex;
     background-image: url(../img/restos1.jpg);
-    height: 80px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     /* padding: 10px; */
@@ -40,12 +40,11 @@ a{
     margin-left: 30px;
 }
 
-.titu{
+.contenedor-logo .titu{
     display: flex;
     flex-direction: column;
-    font-size: 250%;
-    color: green;
-    margin-left: 40%;
+    margin-left: 50%;
+    margin-top: 2%;
 }
 
 nav{

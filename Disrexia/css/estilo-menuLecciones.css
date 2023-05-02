@@ -40,12 +40,11 @@ a{
     margin-left: 30px;
 }
 
-.titu{
+.contenedor-logo .titu{
     display: flex;
     flex-direction: column;
-    font-size: 250%;
-    color: #002060;
     margin-left: 50%;
+    margin-top: 2%;
 }
 
 nav{
