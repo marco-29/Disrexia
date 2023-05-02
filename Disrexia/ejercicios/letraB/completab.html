@@ -7,6 +7,11 @@
     background-image: url('../imagenes/zoologico.jpg');
     background-size: cover;
   }
+  
+      img {
+        width: 15%;
+      }
+
       body {
         font-family: Arial, sans-serif;
         text-align: center;
@@ -36,6 +41,7 @@
       #result {
         margin-top: 20px;
         font-size: 1.2em;
+        color: white;
       }
 
       #new-word {
@@ -51,40 +57,77 @@
     <button id="submit" onclick="checkAnswer()">Comprobar</button>
     <div id="result"></div>
     <button id="new-word" onclick="newWord()">siguiente palabra</button>
+    <br>
+    <img id="image" src="">
+    <audio id="audio"></audio>
+  
     <script>
-      // Array de palabras
-      const words = [ 'puerta', 'barco'];
+      // Array de palabras con su imagen y sonido correspondientes
+      const words = [
+        { word: 'puerta', image: 'puerta.jpg', audio: 'puerta.mp3' },
+        { word: 'barco', image: '../imagenes/b.png', audio: '../sonidos/barco.mp3' }
+      ];
       // Seleccionar una palabra al azar
       let currentWord = words[Math.floor(Math.random() * words.length)];
-
+  
       // Mostrar la palabra con letras faltantes
-      let hiddenWord = currentWord.replace(/[bdpq]/g, '_');
+      let hiddenWord = currentWord.word.replace(/[bdpq]/g, '_');
       document.getElementById('word').textContent = hiddenWord;
-
+  
+      // Actualizar imagen y sonido
+      document.getElementById('image').src = currentWord.image;
+      document.getElementById('audio').src = currentWord.audio;
+  
+      // Contador de respuestas correctas
+      let correctAnswers = 0;
+  
       // Función para comprobar la respuesta del usuario
       function checkAnswer() {
         let answer = document.getElementById('answer').value.toLowerCase();
-        if (answer === currentWord) {
+        if (answer === currentWord.word) {
           document.getElementById('result').textContent = '¡Correcto!';
-          // Avanzar a la siguiente palabra
-          currentWord = words[Math.floor(Math.random() * words.length)];
-          hiddenWord = currentWord.replace(/[bdpq]/g, '_');
-          document.getElementById('word').textContent = hiddenWord;
-          document.getElementById('answer').value = '';
-          document.getElementById('result').textContent = '';
+          correctAnswers++;
+          if (correctAnswers === 3) {
+            // Avanzar a la siguiente página
+            window.location.href = '../menuEjercicios.html';
+          } else {
+            // Avanzar a la siguiente palabra
+            currentWord = words[Math.floor(Math.random() * words.length)];
+            hiddenWord = currentWord.word.replace(/[bdpq]/g, '_');
+            document.getElementById('word').textContent = hiddenWord;
+            document.getElementById('answer').value = '';
+            document.getElementById('result').textContent = '';
+  
+            // Actualizar imagen y sonido
+            document.getElementById('image').src = currentWord.image;
+            document.getElementById('audio').src = currentWord.audio;
+          }
         } else {
           document.getElementById('result').textContent = 'Incorrecto, intenta de nuevo.';
         }
       }
-
+  
       // Función para seleccionar una nueva palabra al azar
       function newWord() {
         currentWord = words[Math.floor(Math.random() * words.length)];
-        hiddenWord = currentWord.replace(/[bdpq]/g, '_');
+        hiddenWord = currentWord.word.replace(/[bdpq]/g, '_');
         document.getElementById('word').textContent = hiddenWord;
         document.getElementById('answer').value = '';
         document.getElementById('result').textContent = '';
+  
+        // Actualizar imagen y sonido
+        document.getElementById('image').src = currentWord.image;
+        document.getElementById('audio').src = currentWord.audio;
       }
+  
+      // Función para reproducir el audio
+      function playAudio() {
+        document.getElementById('audio').play();
+      }
+  
+      // Agregar evento click a la imagen
+      document.getElementById('image').addEventListener('click', playAudio);
     </script>
   </body>
+  
 </html>
