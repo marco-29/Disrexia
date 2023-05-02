@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Identificación de la izquierda y derecha</title>
+	<style>
+            body {
+    background-image: url("../imagenes/zoologico.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+		div {
+		  max-width: 500px;
+		  margin: auto;
+		  text-align: center;
+		}
+
+		p {
+		  font-size: 2rem;
+		  font-weight: bold;
+		  color: white;
+		}
+
+		button {
+		  background-color: #008CBA;
+		  border: none;
+		  color: white;
+		  padding: 10px 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 10px;
+		  cursor: pointer;
+		}
+
+		img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: auto;
+}
+
+
+		#respuesta {
+		  font-size: 1.2rem;
+		  font-weight: bold;
+		  margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Identifica tu izquierda y derecha:</p>
+		<img id="imagen-mano-izquierda" src="../imagenes/izquierda.png" alt="Imagen de mano izquierda" onclick="reproducirSonidoIzquierda()">
+		<audio id="sonido-izquierda" src="../sonidos/izquierda.mp3"></audio>
+		<img id="imagen-mano-derecha" src="../imagenes/derecha.png" alt="Imagen de mano derecha" onclick="reproducirSonidoDerecha()">
+		<audio id="sonido-derecha" src="../sonidos/derecha.mp3"></audio>
+		<br>
+		<button id="izquierda">Izquierda</button>
+		<button id="derecha">Derecha</button>
+		<p id="respuesta"></p>
+	</div>
+	
+	<script>
+		function reproducirSonidoIzquierda() {
+			const sonidoIzquierda = document.getElementById("sonido-izquierda");
+			sonidoIzquierda.currentTime = 0;
+			sonidoIzquierda.play();
+		}
+
+		function reproducirSonidoDerecha() {
+			const sonidoDerecha = document.getElementById("sonido-derecha");
+			sonidoDerecha.currentTime = 0;
+			sonidoDerecha.play();
+		}
+		
+		let contadorRespuestasCorrectas = 0;
+		
+		const btnIzquierda = document.getElementById('izquierda');
+		const btnDerecha = document.getElementById('derecha');
+		const respuesta = document.getElementById('respuesta');
+		const imagenManoIzquierda = document.getElementById('imagen-mano-izquierda');
+		const imagenManoDerecha = document.getElementById('imagen-mano-derecha');
+		
+		const imagenesMano = [
+		  '../imagenes/izquierda.png',
+		  '../imagenes/derecha.png'
+		];
+
+		function mostrarManoAleatoria() {
+		  const indice = Math.floor(Math.random() * imagenesMano.length);
+		  const mano = imagenesMano[indice];
+		  if (mano === '../imagenes/izquierda.png') {
+		  	imagenManoIzquierda.style.display = 'block';
+		  	imagenManoDerecha.style.display = 'none';
+		  } else {
+		  	imagenManoIzquierda.style.display = 'none';
+		  	imagenManoDerecha.style.display = 'block';
+		  }
+		  return indice; // devuelve el índice de la imagen mostrada
+		}
+
+		const respuestaCorrecta = {
+		  0: 'izquierda', // imagen de mano izquierda
+		  1: 'derecha' // imagen de mano derecha
+		};
+
+		function verificarRespuesta(respuestaUsuario, indiceImagen) {
+		  const respuestaEsperada = respuestaCorrecta[indiceImagen];
+		  if (respuestaUsuario === respuestaEsperada) {
+		    respuesta.innerHTML = 'Respuesta: ¡Correcto!';
+		    contadorRespuestasCorrectas++; // incrementar el contador de respuestas correctas
+		    if (contadorRespuestasCorrectas === 3) {
+		      window.location.href = '../menuEjercicios.html'; // redireccionar a otro archivo
+
+      window.location.href = '../menuEjercicios.html'; // redireccionar a otro archivo HTML
+    }
+  } else {
+    respuesta.innerHTML = 'Respuesta: Incorrecto. Intentalo de nuevo.';
+  }
+}
+
+let indiceImagenActual = mostrarManoAleatoria();
+
+btnIzquierda.addEventListener('click', function() {
+  verificarRespuesta('izquierda', indiceImagenActual);
+  indiceImagenActual = mostrarManoAleatoria(); // mostramos una nueva imagen aleatoria
+});
+
+btnDerecha.addEventListener('click', function() {
+  verificarRespuesta('derecha', indiceImagenActual);
+  indiceImagenActual = mostrarManoAleatoria(); // mostramos una nueva imagen aleatoria
+});
+
+	</script>
+</body>
+</html>
+
