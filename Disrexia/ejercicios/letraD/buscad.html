@@ -69,80 +69,50 @@
 			</div>
 		</div>
 		<script>
-	var objetos = [   
-	 {  
-		nombre: "bicicleta",        
-	 	imagen: "../imagenes/bicicleta.png",        
-	 	audio: "../sonidos/bicicleta.mp3",        
-	 	respuesta: "bicicleta",        
-	 	incorrectas: ["picicleta", "qicicleta", "dicicleta"]
-    },
-    {
-        nombre: "burro",
-        imagen: "../imagenes/burro.png",
-        audio: "../sonidos/burro.mp3",
-        respuesta: "burro",
-        incorrectas: ["purro", "qurro", "durro"]
-    },
-    {
-        nombre: "barco",
-        imagen: "../imagenes/barco.png",
-        audio: "../sonidos/barco.mp3",
-        respuesta: "barco",
-        incorrectas: ["parco", "darco", "qarco"]
-    },
-    {
-        nombre: "ballena",
-        imagen: "../imagenes/ballena.png",
-        audio: "../sonidos/ballena.mp3",
-        respuesta: "ballena",
-        incorrectas: ["dallena", "pallena", "qallena"]
-    },
-    {
-        nombre: "binoculares",
-        imagen: "../imagenes/binoculares.png",
-        audio: "../sonidos/binoculares.mp3",
-        respuesta: "binoculares",
-        incorrectas: ["dinoculares", "pinoculares", "qinoculares"]
-    },
-    {
-        nombre: "abeja",
-        imagen: "../imagenes/abeja.png",
-        audio: "../sonidos/abeja.mp3",
-        respuesta: "abeja",
-        incorrectas: ["abeija", "aveja", "abega"]
-    },
-    {
-        nombre: "bombilla",
-        imagen: "../imagenes/bombilla.png",
-        audio: "../sonidos/bombilla.mp3",
-        respuesta: "bombilla",
-        incorrectas: ["vombilla", "bompilla", "pombilla"]
-    },
-    {
-        nombre: "balón",
-        imagen: "../imagenes/balon.png",
-        audio: "../sonidos/balon.mp3",
-        respuesta: "balón",
-        incorrectas: ["barón", "palón", "balan"]
-    },
-    {
-        nombre: "botella",
-        imagen: "../imagenes/botella.png",
-        audio: "../sonidos/botella.mp3",
-        respuesta: "botella",
-        incorrectas: ["votella", "botolla", "botelia"]
-    },
-    {
-        nombre: "burbuja",
-        imagen: "../imagenes/burbuja.png",
-        audio: "../sonidos/burbuja.mp3",
-        respuesta: "burbuja",
-        incorrectas: ["burvuja", "burbuga", "burbula"]
-    }
+var objetos = [
+{
+nombre: "dedal",
+imagen: "../imagenes/dedal.png",
+audio: "../sonidos/dedal.mp3",
+respuesta: "dedal",
+incorrectas: ["bebil", "popal", "qiqilqta"]
+},
+{
+nombre: "dado",
+imagen: "../imagenes/dado.png",
+audio: "../sonidos/dado.mp3",
+respuesta: "dado",
+incorrectas: ["papo", "qabo", "bepo"]
+},
+{
+nombre: "delantal",
+imagen: "../imagenes/delantal.png",
+audio: "../sonidos/delantal.mp3",
+respuesta: "delantal",
+incorrectas: ["pelantal", "belantal", "qelantal"]
+},
+{
+nombre: "dardo",
+imagen: "../imagenes/dardo.png",
+audio: "../sonidos/dardo.mp3",
+respuesta: "dardo",
+incorrectas: ["qarpo", "pardo", "qardo"]
+},
+{
+nombre: "diamante",
+imagen: "../imagenes/diamante.png",
+audio: "../sonidos/diamante.mp3",
+respuesta: "diamante",
+incorrectas: ["biamante", "piamonte", "qiamante"]
+},
+{
+nombre: "dedo",
+imagen: "../imagenes/dedo.png",
+audio: "../sonidos/dedo.mp3",
+respuesta: "dedo",
+incorrectas: ["pepo", "qedo", "bado"]
+},
 ];
-
-
 		var indiceObjetoActual = 0;
 		var respuestasCorrectas = 0;
 
@@ -194,7 +164,7 @@
 				respuestasCorrectas++;
 				if (respuestasCorrectas === 3) {
 					alert("¡Correcto! Pasas al siguiente nivel.");
-                    window.location.href = "completab.html";
+                    window.location.href = "completad.html";
 					respuestasCorrectas = 0;
 				}
 			}

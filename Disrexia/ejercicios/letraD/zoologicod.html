@@ -75,9 +75,9 @@
     </style>
 </head>
 <body>
-    <h1>Encuentra la letra "b" o el burro en el zoologico </h1>
+    <h1>Encuentra la letra "d" o el delfin en el zoologico </h1>
     <audio id="description-audio" autoplay controls>
-        <source src="../sonidos/encuentrab.mp3" type="audio/mpeg">
+        <source src="../sonidos/encuentrad.mp3" type="audio/mpeg">
     </audio>
     <div id="letter-container">
         <div class="letter letter-b" onclick="playSound('b')"></div>
@@ -85,7 +85,7 @@
         <div class="letter letter-p" onclick="playSound('p')"></div>
         <div class="letter letter-q" onclick="playSound('q')"></div>
     </div>
-    <div id="b-count">B: <span id="count">0</span>/3</div>
+    <div id="b-count">D: <span id="count">0</span>/3</div>
 
     <audio id="b-audio">
         <source src="../sonidos/burro.mp3" type="audio/mpeg">
@@ -108,14 +108,14 @@
             const audioElement = document.getElementById(`${letter}-audio`);
             audioElement.play();
 
-            if (letter === 'b') {
+            if (letter === 'd') {
                 bCount++;
                 countSpan.innerHTML = bCount;
 
                 if (bCount >= 3) {
 
-                    alert("Felicidades, has identificado la letra 'b'."); 
-                    window.location.href = "buscab.html";                 
+                    alert("Felicidades, has identificado la letra 'd'."); 
+                    window.location.href = "buscad.html";                 
                 }
             }
         }
