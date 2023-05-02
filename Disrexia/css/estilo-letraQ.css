@@ -90,30 +90,44 @@ nav a:hover{
 
 .contenedor .contenedor-leccion .madera{
     display: flex;
-    margin-top: -.7cm;
-    margin-left: 9cm;
-    width: 56%;
+    margin-top: -.9cm;
+    margin-left: 8cm;
+    width: 56.3%;
 }
 
-.contenedor .contenedor-leccion .contenedorManos{
+.contenedor .contenedor-leccion .contenedor-letra{
     display: flex;
-    margin-top: -30%;
-    margin-left: 28%;
+    flex-direction: column;
+    margin-top: -35%;
 }
 
-.contenedor .contenedor-leccion .contenedorManos img{
+.contenedor .contenedor-leccion .contenedor-letra .letra-q{
+    width: 10%;
+    margin-left: 57%;
+    margin-top: 4.5%;
+    cursor: pointer;
+    position: relative;
+    /* z-index: 100%; */
+}
+
+
+.contenedor .contenedor-leccion .contenedor-letra .gif-q{
+    width: 23%;
+    margin-top: -.3cm;
+    margin-left: 40%;
+    cursor: pointer;
+}
+
+.contenedor .contenedor-leccion .contenedor-letra .quetzal{
     width: 35%;
-    margin-left: -.3cm;
-}
-
-.contenedor .contenedor-leccion .contenedorManos .izquierda{
+    margin-left: 62%;
+    margin-top: -22%;
     cursor: pointer;
-    padding: 1%;
 }
-
-.contenedor .contenedor-leccion .contenedorManos .derecha{
-    cursor: pointer;
-    padding: 1%;
+.contenedor .contenedor-leccion .audio{
+    display: flex;
+    margin-left: 14cm;
+    margin-top: -2.5cm;
 }
 
 .contenedor .botones{
@@ -128,3 +142,15 @@ nav a:hover{
     margin-left: 17cm;
 }
 
+.contenedor .hoja-que{
+    width: 15%;
+    margin-left: 5%;
+    margin-top: -35%;
+    cursor: pointer;
+}
+.contenedor .hoja-qui{
+    width: 15%;
+    margin-left: 12%;
+    margin-top: -1%;
+    cursor: pointer;
+}
