@@ -51,7 +51,7 @@
     </style>
   </head>
   <body>
-    <h1>escribe toda la palabra agregando la letra p</h1>
+    <h1>escribe toda la palabra agregando la letra q</h1>
     <div id="word"></div>
     <input type="text" id="answer" placeholder="Escribe la palabra">
     <button id="submit" onclick="checkAnswer()">Comprobar</button>
@@ -64,12 +64,12 @@
     <script>
       // Array de palabras con su imagen y sonido correspondientes
       const words = [
-  { word: 'periodico', image: '../imagenes/periodico.png', audio: '../sonidos/periodico.mp3' },
-  { word: 'papaya', image: '../imagenes/papaya.png', audio: '../sonidos/papaya.mp3' },
-  { word: 'pelota', image: '../imagenes/pelota.png', audio: '../sonidos/pelota.mp3' },
-  { word: 'pimiento', image: '../imagenes/pimiento.png', audio: '../sonidos/pimiento.mp3' },
-  { word: 'peluca', image: '../imagenes/peluca.png', audio: '../sonidos/peluca.mp3' },
-  { word: 'perro', image: '../imagenes/perro.png', audio: '../sonidos/perro.mp3' },
+  { word: 'queso', image: '../imagenes/queso.png', audio: '../sonidos/queso.mp3' },
+  { word: 'quetzal', image: '../imagenes/quetzal.png', audio: '../sonidos/quetzal.mp3' },
+  { word: 'quemadura', image: '../imagenes/quemadura.png', audio: '../sonidos/quemadura.mp3' },
+  { word: 'quijote', image: '../imagenes/quijote.png', audio: '../sonidos/quijote.mp3' },
+  { word: 'química', image: '../imagenes/quimica.png', audio: '../sonidos/quimica.mp3' },
+  { word: 'quince', image: '../imagenes/quince.png', audio: '../sonidos/quince.mp3' },
 ];
       // Seleccionar una palabra al azar
       let currentWord = words[Math.floor(Math.random() * words.length)];
@@ -93,7 +93,7 @@
           correctAnswers++;
           if (correctAnswers === 3) {
             // Avanzar a la siguiente página
-            alert("Has completado todos los ejercicios de la letra 'p'.");
+            alert("Has completado todos los ejercicios de la letra 'q'.");
             window.location.href = '../menuEjercicios.html';
           } else {
             // Avanzar a la siguiente palabra
