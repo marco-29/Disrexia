@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Completar Palabras</title>
+    <style>
+         body {
+    background-image: url('../imagenes/zoologico.jpg');
+    background-size: cover;
+  }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 50px;
+        color: white;
+      }
+
+      #word {
+        font-size: 3em;
+        margin-top: 30px;
+        color: white;
+      }
+
+      #answer {
+        margin-top: 20px;
+        padding: 10px;
+      }
+
+      #submit {
+        margin-top: 10px;
+        padding: 10px 20px;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 1.2em;
+      }
+
+      #new-word {
+        margin-top: 20px;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Completar Palabras</h1>
+    <div id="word"></div>
+    <input type="text" id="answer" placeholder="Escribe la palabra">
+    <button id="submit" onclick="checkAnswer()">Comprobar</button>
+    <div id="result"></div>
+    <button id="new-word" onclick="newWord()">siguiente palabra</button>
+    <script>
+      // Array de palabras
+      const words = [ 'puerta', 'barco'];
+      // Seleccionar una palabra al azar
+      let currentWord = words[Math.floor(Math.random() * words.length)];
+
+      // Mostrar la palabra con letras faltantes
+      let hiddenWord = currentWord.replace(/[bdpq]/g, '_');
+      document.getElementById('word').textContent = hiddenWord;
+
+      // Función para comprobar la respuesta del usuario
+      function checkAnswer() {
+        let answer = document.getElementById('answer').value.toLowerCase();
+        if (answer === currentWord) {
+          document.getElementById('result').textContent = '¡Correcto!';
+          // Avanzar a la siguiente palabra
+          currentWord = words[Math.floor(Math.random() * words.length)];
+          hiddenWord = currentWord.replace(/[bdpq]/g, '_');
+          document.getElementById('word').textContent = hiddenWord;
+          document.getElementById('answer').value = '';
+          document.getElementById('result').textContent = '';
+        } else {
+          document.getElementById('result').textContent = 'Incorrecto, intenta de nuevo.';
+        }
+      }
+
+      // Función para seleccionar una nueva palabra al azar
+      function newWord() {
+        currentWord = words[Math.floor(Math.random() * words.length)];
+        hiddenWord = currentWord.replace(/[bdpq]/g, '_');
+        document.getElementById('word').textContent = hiddenWord;
+        document.getElementById('answer').value = '';
+        document.getElementById('result').textContent = '';
+      }
+    </script>
+  </body>
+</html>
