@@ -1,3 +1,4 @@
+/* Estilos de barra de navegacion */
 body{
     background-image: url(../img/fondo31.jpg);
     height:100vh;
@@ -7,55 +8,107 @@ body{
     background-size: cover;
     position: relative;
     font-family: Courier;
+    margin: 0;
+}
+header{
+    display: flex;
+    background-image: url(../img/restos1.jpg);
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 150%;
 }
 
 .contenedor-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 150%;
+    color: #002060;
+}
+.logo img{
+    width: 150px;
+    margin-left: 30px;
+}
+
+.contenedor-logo .titu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    margin-top: 2%;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 35%;
+}
+.boton-lecciones img{
+    transition: transform .2s;
+    width: 60%;
+    padding: 1%;
+}
+.boton-lecciones img:hover{
+    transform: scale(1.5);
     /* background-color: #002060; */
-    text-decoration: none;
-    height: 50px;
+    border-radius: 40%;
 }
 
-.contenedor-logo .texto{
-    color: #002060;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+.boton-ejercicios img{
+    transition: transform .2s;
+    width: 53%;
+}
+.boton-ejercicios img:hover{
+    transform: scale(1.5);
+    /* background-color: green; */
+    border-radius: 40%;
 }
 
-.contenedor-logo .rex{
-    margin-left: 90%;
-    margin-top: -60%;
-}
-
-.titu{
-    font-size: 60px;
-    font-family:'Courier New', Courier, monospace;
-    margin-right: 18%;
-    margin-left: 25%;
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
     color: #002060;
 }
 
-.contenedor-leccion img{
-    margin-left: 20%;
+nav a:hover{
+    color: #49B19D;
 }
 
-.botones{
-    width: 74vw;
-    margin-left: 15%;
-    margin-top: -12%;
+.contenedor{
+    display: flex;
+    flex-direction: column;
 }
 
-.botones .regresar{
-    margin-left: -20%;
-    margin-top: -12%;
+.contenedor .contenedor-leccion .madera{
+    display: flex;
+    margin-top: -.7cm;
+    margin-left: 9cm;
+    width: 62%;
 }
-
-.botones .siguiente{
-    margin-left: 85%;
-    margin-top: -12%;
-}
-
 .audio{
-    margin-left: 33%;
-    margin-top: -2%;
+    display: flex;
+    margin-left: 12.5cm;
+    margin-top: -1.5cm;
 }
+
+.contenedor .botones{
+    display: flex;
+    margin-top: -3cm;
+    margin-left: 27%;
+}
+.contenedor .botones .regresar{
+   margin-left: -6cm;
+}
+.contenedor .botones .siguiente{
+    margin-left: 17cm;
+}
+

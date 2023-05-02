@@ -123,6 +123,11 @@ nav a:hover{
     margin-top: -22%;
     cursor: pointer;
 }
+.contenedor .contenedor-leccion .audio{
+    display: flex;
+    margin-left: 14cm;
+    margin-top: -2cm;
+}
 
 .contenedor .botones{
     display: flex;

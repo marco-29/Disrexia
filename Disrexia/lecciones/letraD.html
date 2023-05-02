@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Letra B</title>
+    <title>Letra D</title>
     <link rel="stylesheet" href="../css/estilo-letraD.css" />
     <link rel="shortcut icon" href="../img/rex.gif" type="image/x-icon" />
-    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css" /> -->
   </head>
   <body">
-  <script src="../js/lecciones/Lateralidad.js"></script>
+
+  <script src="../js/lecciones/letraD.js"></script>
+
     <header>
       <div class="contenedor-logo">
         <a class="logo" href="../index.html">
           <img src="../img/logo.png" alt="" />
         </a>
         <div class="titu">
-          <img src="../img/letra-D.png" alt="" width="200%">
+          <img src="../img/letra-B.png" alt="" width="200%">
         </div>
       </div>
       <nav>
@@ -36,18 +37,29 @@
 
     <div class="contenedor">
       <div class="contenedor-leccion">
-        <a onclick="playSound('lateralidad')"><img src="../img/madera.png" alt="Izquierda" class="madera"  width="15%"></a>
-        <div class="contenedorManos">
-          <img src="../img/letraB.png" alt="" width="15%" class="izquierda" onclick="playSound('izquierda')">
-          <img src="../img/leccionB.png" alt="" width="15%" class="derecha" onclick="playSound('')">
-          <img src="../img/Bb.gif" alt="" width="15%" class="derecha" onclick="playSound('')">
-          <img src="../img/bu.png" alt="" width="15%" class="derecha" onclick="playSound('')">
+        <img src="../img/madera.png" alt="LetraD" class="madera"  width="15%">
+        <div class="contenedor-letra">
+          <img src="../img/letraD.png" alt="" class="letra-b" onclick="playSound('D')">
+          <img src="../img/Dd.gif" alt="" class="gif-b" onclick="playSound('')">
+          <img src="../img/leccionD.png" alt="" class="buho" onclick="playSound('dino')">
+        </div>
+        <div class="audio">
+          <audio controls autoplay>
+              <source src="../audios/letraD.m4a">
+          </audio>
         </div>
       </div>
       <div class="botones">
-        <a href="../lecciones/menuLecciones.html" class="regresar"><img src="../img/btn-regresar.png" alt="" width="60%"></a>
-        <a href="izquierda.html" class="siguiente"><img src="../img/btn-siguiente.png" alt="" width="60%"></a>
+        <a href="../lecciones/letraD.html" class="regresar"><img src="../img/btn-regresar.png" alt="" width="60%"></a>
+        <a href="letraP.html" class="siguiente"><img src="../img/btn-siguiente.png" alt="" width="60%"></a>
       </div>
+
+      <img src="../img/da.png" alt="" class="hoja-da" onclick="playSound('da')">
+      <img src="../img/de.png" alt="" class="hoja-de" onclick="playSound('de')">
+      <img src="../img/di.png" alt="" class="hoja-di" onclick="playSound('di')">
+      <img src="../img/do.png" alt="" class="hoja-do" onclick="playSound('do')">
+      <img src="../img/du.png" alt="" class="hoja-du" onclick="playSound('du')">
+
     </div>
   </body>
 </html>
