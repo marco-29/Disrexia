@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../css/estilo-monos.css" />
   </head>
   <body>
+
+    
     <header>
       <div class="contenedor-logo">
         <a class="logo" href="../../index.html">
@@ -33,42 +35,37 @@
     
     <section>
       <div class="contenedor">
-        <div class="frutas">
-          <img class="banana" src="../../img/banana.png" alt="">
-          <img class="mani" src="../../img/mani.png" alt="">
+
+        <p><b>El mono quiere comer su platanao ayudalo a saber en que direccion se encuentra</b></p>
+
+        <div id="frutas" class="frutas">
+          <img id="banana" class="banana" src="../../img/banana.png" alt="" onclick="reproducirSonidoIzquierda()">
+		      <audio id="sonido-izquierda" src="../../audios/izquierda.mp3"></audio>
+          <img id="mani" class="mani" src="../../img/mani.png" alt="" onclick="reproducirSonidoIzquierda()">
+		      <audio id="sonido-izquierda" src="../../audios/izquierda.mp3"></audio>
+          <img id="pina" class="pina" src="../../img/piña.png" alt="" onclick="reproducirSonidoIzquierda()">
+          <img id="banana2" class="banana2" src="../../img/banana.png" alt="" onclick="reproducirSonidoIzquierda()">
         </div>
+
         <div class="mono">
           <img src="../../img/mono.png" alt="">
         </div>
+
+        <div class="botones">
+          <button id="izquierda">Izquierda</button>
+          <button id="derecha">Derecha</button>
+        </div>
+
       </div>
 
       <div class="marcador">
-
+        <img src="../../img/puntaje.png" alt="">
+        <br>
+        <p id="puntaje"></p>
       </div>
     </section>
-    <!-- <div class="monos">
-        <a href="#"><img src="../img/monos.png" alt="monos"></a>
-    </div>
-    <div class="pinguinos">
-        <a href="#"><img src="../img/pinguinos.png" alt="pinguinos"></a>
-    </div>
-    <div class="jirafas">
-        <a href="#"><img src="../img/jirafas.png" alt="jiarafas"></a>
-    </div>
-    <div class="leones">
-        <a href="#"><img src="../img/leones.png" alt="leones"></a>
-    </div>
-    <div class="zebras">
-        <a href="#"><img src="../img/zebras.png" alt="zebras"></a>
-    </div>
-    <div class="pandas">
-        <a href="#"><img src="../img/pandas.png" alt="pandas"></a>
-    </div>
-    <div class="elefantes">
-        <a href="#"><img src="../img/elefantes.png" alt="elefantes"></a>
-    </div>
-    <div class="tienda">
-        <a href="#"><img src="../img/tiendita-zoologico.png" alt=""></a>
-    </div> -->
+
+    <script src="../../js/evaluacion/monos.js"></script>
+
   </body>
 </html>
