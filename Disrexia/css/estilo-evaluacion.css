@@ -1,127 +1,159 @@
 body{
-    background-image: url(../img/zoologico.jpg);
-    height:100vh;
-    width:100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
     font-family: Courier;
     margin: 0;
 }
 
-.monos{
-    margin-left: 3.5%;
-    margin-top: -5.5%;
+header{
+    background-image: url(../img/restos1.jpg);
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* align-content: center; */
+    /* padding: 10px; */
 }
 
-.monos img{
-    transition: transform .2s;
-    /* transition: transform 0.32s ease-in-out; */
-    width: 25%;
-}
-.monos img:hover{
-    transform: scale(1.1);
-    background-color: #B4F47C;
-    /* transform: translateY(-20px); */
+.contenedor-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.pinguinos{
-    margin-left: -.5%;
-    margin-top: -4%;
+.contenedor-logo .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.contenedor-logo .logo img{
+    width: 150px;
 }
 
-.pinguinos img{
-    transition: transform .2s;
-    width: 27%;
+.titu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
-.pinguinos img:hover{
-    transform: scale(1.1);
-    background-color: #7ED7FE;
-}
-
-.jirafas{
-    margin-left: -.4%;
-    margin-top: -6.5%;
-}
-
-.jirafas img{
-    transition: transform .2s;
-    width: 35%;
-}
-.jirafas img:hover{
-    transform: scale(1.1);
-    background-color: #CEF7B3;
-}
-
-.leones{
-    margin-left: 32%;
-    margin-top: -35%;
-    position: relative;
-}
-
-.leones img{
-    transition: transform .2s;
+.titu img{
     width: 50%;
 }
-.leones img:hover{
-    transform: scale(1.1);
-    background-color: #5CB012;
+
+nav{
+    display: flex;
+    flex-direction: row;
 }
 
-.zebras{
-    margin-left: 40%;
-    margin-top: -38%;
-}
-
-.zebras img{
+.boton-lecciones img{
     transition: transform .2s;
     width: 60%;
+    padding: 1%;
 }
-.zebras img:hover{
-    transform: scale(1.1);
-    background-color: #9FEF6C;
-}
-
-.pandas{
-    margin-left: 70%;
-    margin-top: -8%;
-    position: relative;
+.boton-lecciones img:hover{
+    transform: scale(1.5);
+    /* background-color: #002060; */
+    border-radius: 40%;
 }
 
-.pandas img{
+.boton-ejercicios img{
     transition: transform .2s;
-    width: 100%;
+    width: 53%;
 }
-.pandas img:hover{
-    transform: scale(1.1);
-    background-color: #734B17;
-}
-
-.elefantes{
-    margin-left: 60%;
-    margin-top: -1%;
+.boton-ejercicios img:hover{
+    transform: scale(1.5);
+    /* background-color: green; */
+    border-radius: 40%;
 }
 
-.elefantes img{
-    transition: transform .2s;
-    width: 100%;
-}
-.elefantes img:hover{
-    transform: scale(1.1);
-    background-color: #64DEFD;
-}
-
-.tienda{
-    margin-left: 31%;
-    margin-top: -40%;
+section{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
 }
 
-.tienda img{
-    transition: transform .2s;
-    width: 15%;
+.contenedor{
+    border: solid 1px;
+    width: 950px;
+    height: 543px;
+    background-image: url(../img/zoologico.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
 }
-.tienda img:hover{
-    transform: scale(1.1);
-    background-color: #E3DBAF;
+
+.contenedor .monos img{
+    width: 240%;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+.contenedor .monos img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .pinguinos img{
+    width: 233%;
+    margin-left: -89%;
+    margin-top: 127%;
+}
+.contenedor .pinguinos img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .jirafas img{
+    width: 233%;
+    margin-left: -140%;
+    margin-top: 165%;
+}
+.contenedor .jirafas img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .leones img{
+    width: 230%;
+    margin-left: -25%;
+    margin-top: 110%;
+}
+.contenedor .leones img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .zebras img{
+    width: 230%;
+    margin-left: -45%;
+    margin-top: 3%;
+}
+.contenedor .zebras img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .pandas img{
+    width: 240%;
+    margin-left: 30%;
+    margin-top: 70%;
+}
+.contenedor .pandas img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .elefantes img{
+    width: 230%;
+    margin-left: -100%;
+    margin-top: 163%;
+}
+.contenedor .elefantes img:hover{
+    border: solid 5px purple;
+}
+
+.contenedor .tienda img{
+    width: 250%;
+    margin-left: -1235%;
+    margin-top: 40%;
+}
+.contenedor .tienda img:hover{
+    border: solid 5px purple;
 }

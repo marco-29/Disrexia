@@ -84,19 +84,36 @@ nav a:hover{
     color: #49B19D;
 }
 
-.contenedor{
+.contenedor1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.contenedor1 .contenedor{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-.contenedor img{
+.contenedor1 .contenedor img{
     transition: transform 0.32s ease-in-out;
     width: 80%;
 }
 
-.contenedor img:hover{
+.contenedor1 .contenedor img:hover{
+    transform: translateY(-20px);
+}
+
+.contenedor1 .evaluacion img{
+    transition: transform 0.32s ease-in-out;
+    width: 40%;
+    margin-left: 30%;
+}
+.contenedor1 .evaluacion img:hover{
     transform: translateY(-20px);
 }
 
