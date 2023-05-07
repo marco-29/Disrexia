@@ -3,6 +3,7 @@ body{
     margin: 0;
 }
 
+/* INICIO DE HEADER */
 header{
     background-image: url(../img/restos1.jpg);
     height: 110px;
@@ -66,9 +67,10 @@ nav{
     /* background-color: green; */
     border-radius: 40%;
 }
+/* FIN DE HEADER */
 
 section{
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -79,81 +81,39 @@ section{
 .contenedor{
     border: solid 1px;
     width: 950px;
-    height: 543px;
-    background-image: url(../img/zoologico.jpg);
+    height: 540px;
+    background-image: url(../img/fondo-monos2.jpg);
     background-size: cover;
     display: flex;
+    flex-direction: column;
+}
+
+.contenedor .frutas{
+    /* background-color: aliceblue; */
+    display: flex;
     flex-direction: row;
+    /* margin-left: 68%;
+    margin-top: 10%; */
 }
 
-.contenedor .monos img{
-    width: 240%;
-    margin-left: 35%;
-    margin-top: 20%;
-}
-.contenedor .monos img:hover{
-    border: solid 5px purple;
+.contenedor .frutas .banana{
+    margin-left: 15%;
+    margin-top: 10%;
+    width: 10%;
 }
 
-.contenedor .pinguinos img{
-    width: 233%;
-    margin-left: -89%;
-    margin-top: 127%;
-}
-.contenedor .pinguinos img:hover{
-    border: solid 5px purple;
+.contenedor .frutas .mani{
+    margin-left: 45%;
+    margin-top: 10%;
+    width: 10%;
 }
 
-.contenedor .jirafas img{
-    width: 233%;
-    margin-left: -140%;
-    margin-top: 165%;
-}
-.contenedor .jirafas img:hover{
-    border: solid 5px purple;
+.contenedor .mono{
+    /* background-color: aliceblue; */
+    margin-left: 38%;
+    margin-top: 10%;
 }
 
-.contenedor .leones img{
-    width: 230%;
-    margin-left: -25%;
-    margin-top: 110%;
-}
-.contenedor .leones img:hover{
-    border: solid 5px purple;
-}
-
-.contenedor .zebras img{
-    width: 230%;
-    margin-left: -45%;
-    margin-top: 3%;
-}
-.contenedor .zebras img:hover{
-    border: solid 5px purple;
-}
-
-.contenedor .pandas img{
-    width: 240%;
-    margin-left: 30%;
-    margin-top: 70%;
-}
-.contenedor .pandas img:hover{
-    border: solid 5px purple;
-}
-
-.contenedor .elefantes img{
-    width: 230%;
-    margin-left: -100%;
-    margin-top: 163%;
-}
-.contenedor .elefantes img:hover{
-    border: solid 5px purple;
-}
-
-.contenedor .tienda img{
-    width: 250%;
-    margin-left: -1235%;
-    margin-top: 40%;
-}
-.contenedor .tienda img:hover{
-    border: solid 5px purple;
+.contenedor .mono img{
+    width: 30%;
 }
