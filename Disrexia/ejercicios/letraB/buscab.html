@@ -3,7 +3,13 @@
 	<head>
 		<title>Juego de objetos</title>
 		<style>
-			body {
+			.btn-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+		body {
 				margin: 0;
 				padding: 0;
 				background-image: url(../imagenes/zoologico.jpg);
@@ -17,12 +23,13 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				color: white;
 			}
 			#audio-btn {
 				position: absolute;
 				top: 10px;
 				left: 10px;
-				background-color: white;
+				background-color: #008CBA;
 				padding: 10px;
 				border-radius: 5px;
 				cursor: pointer;
@@ -45,7 +52,7 @@
 			}
 			.opcion {
 				display: inline-block;
-				background-color: white;
+				background-color: #008CBA;
 				padding: 10px;
 				border-radius: 5px;
 				margin: 10px;
@@ -58,8 +65,11 @@
 	</head>
 	<body onload="reproducirAudio()">
 		<div id="contenedor">
-			<div id="audio-btn" onclick="reproducirAudio()">Reproducir audio</div>
-			<div id="texto">busca la palabra escrita correctamente</div>
+			<a href="../menuEjercicios.html" class="btn-img"><img src="../imagenes/menu.png" width="100" height="100"></a>
+
+
+			<div id="audio-btn" onclick="reproducirAudio()">Repetir instruccion</div>
+			<div id="texto">Busca la palabra escrita correctamente con la letra 'b'</div>
 			<div id="objeto"></div>
 			<div id="opciones">
 				<div class="opcion" onclick="verificarRespuesta(this)"></div>
@@ -130,17 +140,19 @@
 			return objeto;
 		}
 
+
 		function mostrarObjeto(objeto) {
   var objetoEl = document.getElementById("objeto");
   objetoEl.style.backgroundImage = "url(" + objeto.imagen + ")";
-  
+
   var audio = new Audio(objeto.audio);
-  audio.play();
-  
+
   objetoEl.onclick = function() {
     audio.play();
   };
 }
+
+
 
 
 
@@ -160,20 +172,24 @@
 		}
 
 		function verificarRespuesta(opcionEl) {
-			var respuesta = opcionEl.innerHTML;
-			var objeto = objetos[indiceObjetoActual];
-			if (respuesta === objeto.respuesta) {
-				respuestasCorrectas++;
-				if (respuestasCorrectas === 3) {
-					alert("¡Correcto! Pasas al siguiente nivel.");
-                    window.location.href = "completab.html";
-					respuestasCorrectas = 0;
-				}
-			}
-			var objetoNuevo = seleccionarObjetoAleatorio();
-			mostrarObjeto(objetoNuevo);
-			mostrarOpciones(objetoNuevo);
-		}
+    var respuesta = opcionEl.innerHTML;
+    var objeto = objetos[indiceObjetoActual];
+    if (respuesta === objeto.respuesta) {
+        respuestasCorrectas++;
+        alert("¡Correcto!");
+        if (respuestasCorrectas === 3) {
+            alert("¡Correcto! Pasas al siguiente nivel.");
+            window.location.href = "./completab.html";
+            respuestasCorrectas = 0;
+        }
+    } else {
+        alert("Incorrecto, intenta de nuevo");
+    }
+    var objetoNuevo = seleccionarObjetoAleatorio();
+    mostrarObjeto(objetoNuevo);
+    mostrarOpciones(objetoNuevo);
+}
+
 
 		function shuffle(array) {
 			for (var i = array.length - 1; i > 0; i--) {

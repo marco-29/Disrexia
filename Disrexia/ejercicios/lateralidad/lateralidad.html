@@ -4,8 +4,19 @@
 	<title>Identificación de la izquierda y derecha</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
+		.btn-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+		 #repetir {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+  }
 		body {
-			background-image: url("../imagenes/zoologico.jpg");
+			background-image: url("../imagenes/lateralidad.jpg");
 			background-repeat: no-repeat;
 			background-size: cover;
 			display: grid;
@@ -37,8 +48,8 @@
 		}
 
 		img {
-			width: 100%;
-			max-width: 100%;
+			width: 80%;
+			max-width: 80%;
 			display: block;
 			margin: auto;
 		}
@@ -57,8 +68,18 @@
 	</style>
 </head>
 <body>
+	
+	<audio id="sonido-inicio" src="../sonidos/izquierdaderecha.mp3"></audio>
+
 	<div>
+		<audio autoplay>
+			<source src="../sonidos/izquierdaderecha.mp3" type="audio/mpeg">
+		  </audio>
+		  
 		<p>Identifica tu izquierda y derecha:</p>
+		<button id="repetir" onclick="reproducirSonidoInicio()">Repetir instruccion</button>
+		<a href="../menuEjercicios.html" class="btn-img"><img src="../imagenes/menu.png" width="100" height="100"></a>
+
 		<img id="imagen-mano-izquierda" src="../imagenes/izquierda.png" alt="Imagen de mano izquierda" onclick="reproducirSonidoIzquierda()">
 		<audio id="sonido-izquierda" src="../sonidos/izquierda.mp3"></audio>
 		<img id="imagen-mano-derecha" src="../imagenes/derecha.png" alt="Imagen de mano derecha" onclick="reproducirSonidoDerecha()">
@@ -70,6 +91,18 @@
 	</div>
 	
 	<script>
+		function reproducirSonidoInicio() {
+    const sonidoInicio = document.getElementById("sonido-inicio");
+    sonidoInicio.currentTime = 0;
+    sonidoInicio.play();
+}
+
+		window.onload = function() {
+    const sonidoInicio = document.getElementById("sonido-inicio");
+    sonidoInicio.currentTime = 0;
+    sonidoInicio.play();
+}
+
 		function reproducirSonidoIzquierda() {
 			const sonidoIzquierda = document.getElementById("sonido-izquierda");
 			sonidoIzquierda.currentTime = 0;
@@ -116,15 +149,16 @@
 		function verificarRespuesta(respuestaUsuario, indiceImagen) {
 		  const respuestaEsperada = respuestaCorrecta[indiceImagen];
 		  if (respuestaUsuario === respuestaEsperada) {
-		    respuesta.innerHTML = 'Respuesta: ¡Correcto!';
 		    contadorRespuestasCorrectas++; // incrementar el contador de respuestas correctas
+			alert("¡Correcto!");
 		    if (contadorRespuestasCorrectas === 3) {
+				alert("¡Correcto! ahora regresemos al menu principal");
 		      window.location.href = '../menuEjercicios.html'; // redireccionar a otro archivo
 
       window.location.href = '../menuEjercicios.html'; // redireccionar a otro archivo HTML
     }
   } else {
-    respuesta.innerHTML = 'Respuesta: Incorrecto. Intentalo de nuevo.';
+    alert("Incorrecto, intenta de nuevo");
   }
 }
 

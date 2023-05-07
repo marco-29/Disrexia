@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio de identificación de letras</title>
     <style>
+        .btn-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
         body {
             background-image: url("../imagenes/zoologico.jpg");
             background-size: cover;
@@ -43,6 +48,21 @@
             position: absolute;
         }
 
+        .letter-perro {
+background-image: url("../imagenes/perro.png");
+top: 30%;
+left: 40%;
+}
+.letter-pinguino {
+background-image: url("../imagenes/pinguino.png");
+top: 70%;
+left: 10%;
+}
+.letter-pantera {
+background-image: url("../imagenes/pantera.png");
+top: 15%;
+left: 80%;
+}
         .letter-b {
             background-image: url("../imagenes/burro.png");
             top: 25%;
@@ -67,25 +87,39 @@
             left: 40%;
         }
 
-        #b-count {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
+
     </style>
 </head>
 <body>
-    <h1>Encuentra la letra "p" o el pato en el zoologico </h1>
+    <h1>Encuentra los animales con la letra "p" en el zoologico </h1>
     <audio id="description-audio" autoplay controls>
         <source src="../sonidos/encuentrap.mp3" type="audio/mpeg">
     </audio>
     <div id="letter-container">
+        <a href="../menuEjercicios.html" class="btn-img"><img src="../imagenes/menu.png" width="100" height="100"></a>
+
+        <div class="letter letter-perro" onclick="playSound('perro')"></div>
+<div class="letter letter-pinguino" onclick="playSound('pinguino')"></div>
+<div class="letter letter-pantera" onclick="playSound('pantera')"></div>
+
+
         <div class="letter letter-b" onclick="playSound('b')"></div>
         <div class="letter letter-d" onclick="playSound('d')"></div>
         <div class="letter letter-p" onclick="playSound('p')"></div>
         <div class="letter letter-q" onclick="playSound('q')"></div>
     </div>
     <div id="b-count">P: <span id="count">0</span>/3</div>
+
+    <audio id="perro-audio">
+        <source src="../sonidos/perro.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="pantera-audio">
+        <source src="../sonidos/pantera.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="pinguino-audio">
+        <source src="../sonidos/pinguino.mp3" type="audio/mpeg">
+      </audio>
+
 
     <audio id="b-audio">
         <source src="../sonidos/burro.mp3" type="audio/mpeg">
@@ -105,20 +139,22 @@
         const countSpan = document.getElementById("count");
 
         function playSound(letter) {
-            const audioElement = document.getElementById(`${letter}-audio`);
-            audioElement.play();
+  const audioElement = document.getElementById(`${letter}-audio`);
+  audioElement.play();
 
-            if (letter === 'p') {
-                bCount++;
-                countSpan.innerHTML = bCount;
+  if (letter === 'p' || letter === 'perro'|| letter === 'pantera'|| letter === 'pinguino') {
+    bCount++;
+    countSpan.innerHTML = bCount;
+    alert("¡Correcto!");
 
-                if (bCount >= 3) {
-
-                    alert("Felicidades, has identificado la letra 'p'."); 
-                    window.location.href = "buscap.html";                 
-                }
-            }
-        }
+    if (bCount >= 3) {
+      alert("Felicidades, has identificado la letra 'p'.");
+      window.location.href = "./buscap.html";
+    }
+  } else {
+    alert("¡Incorrecto! Sigue intentando.");
+  }
+}
     </script>
 
 </body>

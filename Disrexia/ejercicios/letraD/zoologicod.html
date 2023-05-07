@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio de identificación de letras</title>
     <style>
+        .btn-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
         body {
             background-image: url("../imagenes/zoologico.jpg");
             background-size: cover;
@@ -43,6 +48,21 @@
             position: absolute;
         }
 
+        .letter-dragon {
+            background-image: url("../imagenes/dragon.png");
+            top: 30%;
+            left: 40%;
+        }
+        .letter-dodo {
+            background-image: url("../imagenes/dodo.png");    
+            top: 70%;
+            left: 10%;
+        }.letter-dromedario {
+            background-image: url("../imagenes/dromedario.png");
+            top: 15%;
+            left: 80%;
+        }
+
         .letter-b {
             background-image: url("../imagenes/burro.png");
             top: 25%;
@@ -67,25 +87,37 @@
             left: 40%;
         }
 
-        #b-count {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
+    
     </style>
 </head>
 <body>
-    <h1>Encuentra la letra "d" o el delfin en el zoologico </h1>
+    <h1>Encuentra los animales con la letra "d" en el zoologico </h1>
     <audio id="description-audio" autoplay controls>
         <source src="../sonidos/encuentrad.mp3" type="audio/mpeg">
     </audio>
     <div id="letter-container">
+        <a href="../menuEjercicios.html" class="btn-img"><img src="../imagenes/menu.png" width="100" height="100"></a>
+
+        <div class="letter letter-dragon" onclick="playSound('dragon')"></div>
+        <div class="letter letter-dodo" onclick="playSound('dodo')"></div>
+        <div class="letter letter-dromedario" onclick="playSound('dromedario')"></div>
+
         <div class="letter letter-b" onclick="playSound('b')"></div>
         <div class="letter letter-d" onclick="playSound('d')"></div>
         <div class="letter letter-p" onclick="playSound('p')"></div>
         <div class="letter letter-q" onclick="playSound('q')"></div>
     </div>
     <div id="b-count">D: <span id="count">0</span>/3</div>
+
+    <audio id="dragon-audio">
+        <source src="../sonidos/dragon.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="dodo-audio">
+        <source src="../sonidos/dodo.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="dromedario-audio">
+        <source src="../sonidos/dromedario.mp3" type="audio/mpeg">
+    </audio>
 
     <audio id="b-audio">
         <source src="../sonidos/burro.mp3" type="audio/mpeg">
@@ -105,20 +137,22 @@
         const countSpan = document.getElementById("count");
 
         function playSound(letter) {
-            const audioElement = document.getElementById(`${letter}-audio`);
-            audioElement.play();
+  const audioElement = document.getElementById(`${letter}-audio`);
+  audioElement.play();
 
-            if (letter === 'd') {
-                bCount++;
-                countSpan.innerHTML = bCount;
+  if (letter === 'd' || letter === 'dragon'|| letter === 'dodo'|| letter === 'dromedario') {
+    bCount++;
+    countSpan.innerHTML = bCount;
+    alert("¡Correcto!");
 
-                if (bCount >= 3) {
-
-                    alert("Felicidades, has identificado la letra 'd'."); 
-                    window.location.href = "buscad.html";                 
-                }
-            }
-        }
+    if (bCount >= 3) {
+      alert("Felicidades, has identificado la letra 'd'.");
+      window.location.href = "./buscad.html";
+    }
+  } else {
+    alert("¡Incorrecto! Sigue intentando.");
+  }
+}
     </script>
 
 </body>
