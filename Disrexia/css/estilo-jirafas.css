@@ -80,73 +80,135 @@ section{
 
 .contenedor{
     border: solid 1px;
-    width: 950px;
-    height: 540px;
-    background-image: url(../img/fondo-monos2.jpg);
+    width: 1500px;
+    height: 550px;
+    background-image: url(../img/jirafa-fondo.jpg);
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+  
 }
 
 .contenedor p{
     text-align: center;
-    color: white;
+    color: black;
     font-family: cursive;
     font-size: 30px;
 }
 
-.contenedor .frutas{
-    /* background-color: aliceblue; */
-    display: flex;
-    flex-direction: row;
-    /* margin-left: 68%; */
-    margin-top: -15%;
-}
-
-.contenedor .frutas img{
-    display: block;
-}
-
-.contenedor .frutas #banana{
-    margin-left: 20%;
-    margin-top: 10%;
-    width: 10%;
+.letter {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
+    margin: 10px;
+    position: absolute;
 }
-
-.contenedor .frutas #pina{
-    margin-left: -60%;
-    margin-top: 10%;
-    width: 12%;
-    cursor: pointer;
+.letter-ardilla {
+    
+    background-image: url("../../img/ardilla.png");
+    top: 80%;
+    left: 68%;
 }
-
-.contenedor .frutas #mani{
-    margin-left: 40%;
-    margin-top: 10%;
-    width: 10%;
-    cursor: pointer;
+.letter-ballena{
+    background-image: url("../../img/ballena.png");
+    top: 80%;
+    left: 48%;
 }
-
-.contenedor .frutas #banana2{
-    margin-left: 40%;
-    margin-top: 10%;
-    width: 10%;
-    cursor: pointer;
+.letter-bici{
+    height: 18%;
+    background-image: url("../../img/bici.png");
+    top: 65%;
+    left: 8%;
 }
-
-.contenedor .mono{
-    /* background-color: aliceblue; */
-    margin-left: 38%;
-    margin-top: 10%;
+.letter-botas{
+    background-image: url("../../img/botas.png");
+    top: 67%;
+    left: -2%;
 }
-
-.contenedor .mono img{
-    width: 30%;
-    cursor: pointer;
-    display: block;
+.letter-buho1{
+    background-image: url("../../img/buho1.png");
+    top: 27%;
+    left: 68%;
 }
-
+.letter-cocodrilo{
+    background-image: url("../../img/cocodrilo.png");
+    top: 80%;
+    left: 4%;
+}
+.letter-caballo{
+    background-image: url("../../img/caballo.png");
+    top: 67%;
+    left: 60%;
+}
+.letter-delfin{
+    background-image: url("../../img/delfin.png");
+    top: 75%;
+    left: 20%;
+}
+.letter-dados1{
+    background-image: url("../../img/dados1.png");
+    top: 25%;
+    left: 55%;
+}
+.letter-durazno{
+    background-image: url("../../img/durazno.png");
+    height: 16%;
+    top: 30%;
+    left: 17%;
+}
+.letter-dinos{
+    background-image: url("../../img/dinos.png");
+    
+    top: 40%;
+    left: 5%;
+}
+.letter-elefant{
+    background-image: url("../../img/elefant.png");
+    
+    top: 65%;
+    left: 35%;
+}
+.letter-foca{
+    background-image: url("../../img/foca.png");
+    
+    top: 80%;
+    left: 15%;
+}
+.letter-jirafales{
+    background-image: url("../../img/jirafales.png");
+    top: 60%;
+    left: 47%;
+}
+.letter-koala{
+    background-image: url("../../img/koala.png");
+    top: 50%;
+    left: 15%;
+}
+.letter-mapache{
+    background-image: url("../../img/mapache.png");
+    top: 50%;
+    left: 25%;
+}
+.letter-patos{
+    height: 15%;
+    width: 9%;
+    background-image: url("../../img/patos.png");
+    top: 87%;
+    left: 30%;
+}
+.letter-perezoso{
+    background-image: url("../../img/perezoso.png");
+    top: 87%;
+    left: 30%;
+}
+.letter-pez{
+    height: 15%;
+    width: 9%;
+    background-image: url("../../img/pez.png");
+    top: 87%;
+    left: 40%;
+}
 .contenedor .botones{
     display: flex;
     flex-direction: row;
@@ -173,6 +235,7 @@ button {
 }
 
 .marcador{
+    border: solid 1px black; 
     width: 400px;
     height: 540px;
     background-image: url(../img/tronoco.png);
@@ -180,13 +243,14 @@ button {
 }
 
 .marcador img{
-    width: 85%;
-    margin-left: 10%;
+    /* background-color: aqua; */
+    width:100%;
+    /* margin-left: -11%; */
 }
 
 .marcador p{
     text-align: center;
-    color: white;
+    color: yellow;
     font-family: cursive;
     font-size: 50px;
 }
