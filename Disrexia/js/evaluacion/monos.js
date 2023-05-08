@@ -50,7 +50,7 @@ function verificarRespuesta(respuestaUsuario, indiceImagen) {
     alert("¡Correcto!");
     if (contadorRespuestasCorrectas === 3) {
     alert("¡Correcto! ahora regresemos al menu principal");
-      // window.location.href = '../../ejercicios/menuEjercicios.html'; // redireccionar a otro archivo
+      window.location.href = '../../evaluación/evaluacion.html'; // redireccionar a otro archivo
     }
   } else {
     alert("Incorrecto, intenta de nuevo");

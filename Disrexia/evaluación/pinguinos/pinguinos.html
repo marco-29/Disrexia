@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinguinos</title>
+    <link rel="stylesheet" href="../../css/estilo-pinguinos.css" />
+    <link rel="shortcut icon" href="../../img/rex.gif" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-logo">
+        <a class="logo" href="../../index.html">
+          <img src="../../img/logo.png" alt="" />
+        </a>
+      </div>
+      <div class="titu">
+        <img src="../../img/titu-evaluacion.png" alt=""/>
+      </div>
+      <nav>
+        <div class="boton-lecciones">
+          <a href="../../lecciones/menuLecciones.html">
+            <img class="lecciones" src="../../img/btn-lecciones.png" alt="" />
+          </a>
+        </div>
+        <div class="boton-ejercicios">
+          <a href="../../ejercicios/menuEjercicios.html">
+            <img class="ejercicios" src="../../img/btn-ejercicio.png" alt="" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    
+    <section>
+      <div class="contenedor">
+
+        <p><b>Busca la palabra escrita correctamente</b></p>
+
+        <img id="objeto" class="objeto">
+
+        <div id="opciones">
+            <div class="opcion" onclick="verificarRespuesta(this)"></div>
+            <div class="opcion" onclick="verificarRespuesta(this)"></div>
+            <div class="opcion" onclick="verificarRespuesta(this)"></div>
+            <div class="opcion" onclick="verificarRespuesta(this)"></div>
+        </div>
+
+      </div>
+
+      <div class="marcador">
+        <img src="../../img/puntaje-nieve.png" alt="">
+        <br>
+        <p id="puntaje"></p>
+      </div>
+    </section>
+
+    <script src="../../js/evaluacion/pinguinos.js"></script>
+
+  </body>
+</html>
