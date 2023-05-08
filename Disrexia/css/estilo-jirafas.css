@@ -94,6 +94,7 @@ section{
     font-size: 30px;
 }
 
+
 .letter {
     width: 150px;
     height: 150px;
@@ -104,16 +105,11 @@ section{
     margin: 10px;
     position: absolute;
 }
-.letter-ardilla {
-    
-    background-image: url("../img/ardilla.png");
-    top: 80%;
-    left: 68%;
-}
+
 .letter-ballena{
     background-image: url("../img/ballena.png");
     top: 80%;
-    left: 48%;
+    left: 50%;
 }
 .letter-bici{
     height: 18%;
@@ -131,25 +127,15 @@ section{
     top: 27%;
     left: 68%;
 }
-.letter-cocodrilo{
-    background-image: url("../img/cocodrilo.png");
-    top: 80%;
-    left: 4%;
-}
-.letter-caballo{
-    background-image: url("../img/caballo.png");
-    top: 67%;
-    left: 60%;
-}
 .letter-delfin{
     background-image: url("../img/delfin.png");
-    top: 75%;
-    left: 20%;
+    top: 80%;
+    left: 30%;
 }
 .letter-dados1{
     background-image: url("../img/dados1.png");
-    top: 25%;
-    left: 55%;
+    top: 47%;
+    left: 28%;
 }
 .letter-durazno{
     background-image: url("../img/durazno.png");
@@ -157,6 +143,23 @@ section{
     top: 30%;
     left: 17%;
 }
+.letter-ardilla {
+    
+    background-image: url("../img/ardilla.png");
+    top: 80%;
+    left: 68%;
+}
+.letter-cocodrilo{
+    background-image: url("../img/cocodrilo.png");
+    top: 80%;
+    left: 4%;
+}
+.letter-caballo{
+    background-image: url("../img/caballo.png");
+    top: 65%;
+    left: 20%;
+}
+
 .letter-dinos{
     background-image: url("../img/dinos.png");
     
@@ -165,7 +168,6 @@ section{
 }
 .letter-elefant{
     background-image: url("../img/elefant.png");
-    
     top: 65%;
     left: 35%;
 }
@@ -195,27 +197,37 @@ section{
     width: 9%;
     background-image: url("../img/patos.png");
     top: 87%;
-    left: 30%;
+    left: 25%;
 }
 .letter-perezoso{
     background-image: url("../img/perezoso.png");
-    top: 50%;
-    left: 35%;
+    top: 35%;
+    left: -1.5%;
+}
+.letter-paloma{
+    background-image: url("../img/paloma.png");
+    top: 30%;
+    left: 55%;
 }
 .letter-pez{
     height: 15%;
     width: 9%;
     background-image: url("../img/pez.png");
     top: 87%;
-    left: 38%;
+    left: 40%;
 }
 
 .letter-quesito{
-    height: 15%;
-    width: 9%;
     background-image: url("../img/quesito.png");
-    top: 87%;
-    left: 38%;
+    top: 70%;
+    left: 58%;
+}
+.letter-quincenum{
+    background-image: url("../img/quincenum.png");
+    height: 18%;
+    width: 6%;
+    top: 70%;
+    left: 67%;
 }
 .contenedor .botones{
     display: flex;
@@ -226,24 +238,8 @@ section{
     margin-top: -34%;
 }
 
-button {
-    background-image: url(../img/suelo.jpeg);
-    background-size: cover;
-    font-family: cursive;
-    border-radius: 15%;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-}
-
 .marcador{
-    border: solid 1px black; 
+    border: solid 7px black; 
     width: 400px;
     height: 540px;
     background-image: url(../img/tronoco.png);
@@ -256,9 +252,18 @@ button {
     /* margin-left: -11%; */
 }
 
-.marcador p{
+.marcador #puntajeb{
+    margin-top: -163%; 
     text-align: center;
-    color: yellow;
+    color: brown;
+    font-family: cursive;
+    font-size: 50px;
+}
+
+.marcador #puntajed{
+    margin-top: -12%; 
+    text-align: center;
+    color: brown;
     font-family: cursive;
     font-size: 50px;
 }

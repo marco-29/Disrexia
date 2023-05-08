@@ -37,41 +37,45 @@
       <div class="contenedor">
 
         <p><b>Ayuda a la jirafa a encontrar las letras "b", "d", "p" y "q". Da click en la letra encontrda</b></p>
-       
-        <div class="letter letter-ardilla"></div>
-        <div class="letter letter-ballena"></div>
-        <div class="letter letter-bici"></div>
-        <div class="letter letter-botas"></div>
-        <div class="letter letter-buho1"></div>
-        <div class="letter letter-cocodrilo"></div>
-        <div class="letter letter-caballo"></div>
-        <div class="letter letter-delfin"></div>
-        <div class="letter letter-dados1"></div>
-        <div class="letter letter-durazno"></div>
-        <div class="letter letter-dinos"></div>
-        <div class="letter letter-elefant"></div>
-        <div class="letter letter-foca"></div>
-        <div class="letter letter-jirafales"></div>
-        <div class="letter letter-koala"></div>
-        <div class="letter letter-mapache"></div>
-        <div class="letter letter-patos"></div>
-        <div class="letter letter-perezoso"></div>
-        <div class="letter letter-pez"></div>
-        <div class="letter letter-quesito"></div>
+        
+        <div class="letter letter-ballena" onclick="playSound('ballena')"></div>
+        <div class="letter letter-bici" onclick="playSound('bici')"></div>
+        <div class="letter letter-botas" onclick="playSound('botas')"></div>
+        <div class="letter letter-buho1" onclick="playSound('buho1')"></div>
+        <div class="letter letter-delfin" onclick="playSound('delfin')"></div>
+        <div class="letter letter-dados1" onclick="playSound('dados1')"></div>
+        <div class="letter letter-durazno" onclick="playSound('durazno')"></div>
+         <div class="letter letter-patos" onclick="playSound('patos')"></div>
+        <div class="letter letter-perezoso" onclick="playSound('perezoso')"></div>
+        <div class="letter letter-pez" onclick="playSound('pez')"></div>
+        <div class="letter letter-paloma" onclick="playSound('paloma')"></div>
+        <div class="letter letter-quesito" onclick="playSound('quesito')"></div>
+        <div class="letter letter-quincenum" onclick="playSound('quincenum')"></div>
 
+        <div class="letter letter-ardilla" onclick="playSound('ardilla')"></div>
+        <div class="letter letter-cocodrilo" onclick="playSound('cocodrilo')"></div>
+        <div class="letter letter-caballo" onclick="playSound('caballo')"></div>
+        <div class="letter letter-elefant" onclick="playSound('elefant')"></div>
+        <div class="letter letter-foca" onclick="playSound('foca')"></div>
+        <div class="letter letter-jirafales" onclick="playSound('jirafales')"></div>
 
-
-
+        <!-- <div class="letter letter-dinos"></div> -->
+        
+        <!-- <div class="letter letter-koala"></div>
+        <div class="letter letter-mapache"></div> -->
+      
       </div>
+      <div id="b-count"><span id="count"></span></div>
 
       <div class="marcador">
-        <img src="../../img/puntuaje-jirafa.png" alt="">
+        <img src="../../img/puntaje-jirafa.png" alt="">
         <br>
-        <p id="puntaje"></p>
+        <p id="puntajeb"> 0 </p>
+        <p id="puntajed"> 0 </p>
       </div>
     </section>
 
-    <script src="../../js/evaluacion/monos.js"></script>
+    <script src="../../js/evaluacion/jirafas.js"></script>
 
   </body>
 </html>
