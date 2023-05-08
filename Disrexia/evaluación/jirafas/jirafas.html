@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jirafas</title>
+    <link rel="stylesheet" href="../../css/estilo-jirafas.css" />
+  </head>
+  <body>
+
+    
+    <header>
+      <div class="contenedor-logo">
+        <a class="logo" href="../../index.html">
+          <img src="../../img/logo.png" alt="" />
+        </a>
+      </div>
+      <div class="titu">
+        <img src="../../img/titu-evaluacion.png" alt=""/>
+      </div>
+      <nav>
+        <div class="boton-lecciones">
+          <a href="../../lecciones/menuLecciones.html">
+            <img class="lecciones" src="../../img/btn-lecciones.png" alt="" />
+          </a>
+        </div>
+        <div class="boton-ejercicios">
+          <a href="../../ejercicios/menuEjercicios.html">
+            <img class="ejercicios" src="../../img/btn-ejercicio.png" alt="" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    
+    <section>
+      <div class="contenedor">
+
+        <p><b>El mono quiere comer su platanao ayudalo a saber en que direccion se encuentra</b></p>
+
+        <div id="frutas" class="frutas">
+          <img id="banana" class="banana" src="../../img/" alt="" onclick="reproducirSonidoIzquierda()">
+		      <audio id="sonido-izquierda" src="../../audios/izquierda.mp3"></audio>
+          <img id="mani" class="mani" src="../../img/" alt="" onclick="reproducirSonidoIzquierda()">
+		      <audio id="sonido-izquierda" src="../../audios/izquierda.mp3"></audio>
+          <img id="pina" class="pina" src="../../img/" alt="" onclick="reproducirSonidoIzquierda()">
+          <img id="banana2" class="banana2" src="../../img/banana.png" alt="" onclick="reproducirSonidoIzquierda()">
+        </div>
+
+        <div class="mono">
+          <img src="../../img/.png" alt="">
+        </div>
+
+        <!-- <div class="botones">
+          <button id="izquierda">Izquierda</button>
+          <button id="derecha">Derecha</button>
+        </div> -->
+
+      </div>
+
+      <div class="marcador">
+        <img src="../../img/puntaje.png" alt="">
+        <br>
+        <p id="puntaje"></p>
+      </div>
+    </section>
+
+    <script src="../../js/evaluacion/monos.js"></script>
+
+  </body>
+</html>
