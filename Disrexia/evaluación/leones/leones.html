@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leones</title>
+    <link rel="stylesheet" href="../../css/estilo-leones.css" />
+    <link rel="shortcut icon" href="../../img/rex.gif" type="image/x-icon" />
+  </head>
+  <body>
+    <script src="../../js/evaluacion/leones.js"></script>
+
+    <header>
+      <div class="contenedor-logo">
+        <a class="logo" href="../../index.html">
+          <img src="../../img/logo.png" alt="" />
+        </a>
+      </div>
+      <div class="titu">
+        <img src="../../img/titu-evaluacion.png" alt=""/>
+      </div>
+      <nav>
+        <div class="boton-lecciones">
+          <a href="../../lecciones/menuLecciones.html">
+            <img class="lecciones" src="../../img/btn-lecciones.png" alt="" />
+          </a>
+        </div>
+        <div class="boton-ejercicios">
+          <a href="../../ejercicios/menuEjercicios.html">
+            <img class="ejercicios" src="../../img/btn-ejercicio.png" alt="" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    
+    <section>
+      <div class="contenedor">
+        <div class="sopa1">
+            <div id="b" class="b" onclick="cambiar_fondo_b(this)"><p>b</p></div>
+            <div class="q" onclick="cambiar_fondo_q(this)"><p>q</p></div>
+            <div class="p" onclick="cambiar_fondo_p(this)"><p>p</p></div>
+            <div class="q" onclick="cambiar_fondo_q(this)"><p>q</p></div>
+            <div class="d" onclick="cambiar_fondo_d(this)"><p>d</p></div>
+        </div>
+        <div class="sopa2">
+            <div class="p" onclick="cambiar_fondo_p(this)"><p>p</p></div>
+            <div class="b" onclick="cambiar_fondo_b(this)"><p>b</p></div>
+            <div class="q" onclick="cambiar_fondo_q(this)"><p>q</p></div>
+            <div class="d" onclick="cambiar_fondo_d(this)"><p>d</p></div>
+            <div class="p" onclick="cambiar_fondo_p(this)"><p>p</p></div>
+        </div>
+        <div class="sopa3">
+            <div class="b" onclick="cambiar_fondo_b(this)"><p>b</p></div>
+            <div class="d" onclick="cambiar_fondo_d(this)"><p>d</p></div>
+            <div class="p" onclick="cambiar_fondo_p(this)"><p>p</p></div>
+            <div class="q" onclick="cambiar_fondo_q(this)"><p>q</p></div>
+            <div class="b" onclick="cambiar_fondo_b(this)"><p>b</p></div>
+        </div>
+        <div class="sopa4">
+            <div class="d" onclick="cambiar_fondo_d(this)"><p>d</p></div>
+            <div class="p" onclick="cambiar_fondo_p(this)"><p>p</p></div>
+            <div class="b" onclick="cambiar_fondo_b(this)"><p>b</p></div>
+            <div class="d" onclick="cambiar_fondo_d(this)"><p>d</p></div>
+            <div class="b" onclick="cambiar_fondo_b(this)"><p>b</p></div>
+        </div>
+
+        <div class="letras">
+            <div class="letras1">
+                <p>Cuantas b hay:</p>
+                <p>Cuantas d hay:</p>
+            </div>
+            <div class="letras2">
+                <p>Cuantas p hay:</p>
+                <p>Cuantas q hay:</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="marcador">
+        <img src="../../img/puntaje-leon.png" alt="">
+        <br>
+        <p id="puntaje"></p>
+      </div>
+    </section>
+
+
+  </body>
+</html>
