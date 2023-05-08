@@ -1,3 +1,48 @@
+let correctAnswers = 0;
+const puntajeb = document.getElementById('puntajeb');
+const puntajed = document.getElementById('puntajed');
+const puntajep = document.getElementById('puntajep');
+const puntajeq = document.getElementById('puntajeq');
+
+function checkAnswer() {
+    let answerb = document.getElementById('answerb').value.toString();
+    let answerd = document.getElementById('answerd').value.toString();
+    let answerp = document.getElementById('answerp').value.toString();
+    let answerq = document.getElementById('answerq').value.toString();
+    if (answerb == '6') {
+        puntajeb.innerHTML = answerb = "correcto, encontraste todas las letras b";
+    } else if (answerb <= '6') {
+        puntajeb.innerHTML = answerb = "te faltaron letras b por encontrar";
+    } else {
+        puntajeb.innerHTML = answerb = "contaste letras que no son b";
+    }
+
+    if (answerd == '5') {
+        puntajed.innerHTML = answerd = "correcto, encontraste todas las letras d";
+    } else if (answerd <= '5') {
+        puntajed.innerHTML = answerd = "te faltaron letras d por encontrar";
+    } else {
+        puntajed.innerHTML = answerd = "contaste letras que no son d";
+    }
+
+    if (answerp == '5') {
+        puntajep.innerHTML = answerp = "correcto, encontraste todas las letras p";
+    } else if(answerp <= '5') {
+        puntajep.innerHTML = answerp = "te faltaron letras p por encontrar";
+    } else {
+        puntajep.innerHTML = answerp = "contaste letras que no son p";
+    }
+
+    if (answerq == '4') {
+        puntajeq.innerHTML = answerq = "correcto, encontraste todas las letras q";
+    } else if (answerq <= '4') {
+        puntajeq.innerHTML = answerq = "te faltaron letras q por encontrar";
+    } else {
+        puntajeq.innerHTML = answerq = "contaste letras que no son q";
+    }
+
+}
+
 function cambiar_fondo_b(x) {
     if(x.style.background=="rgb(6, 155, 1)") {
         x.style.background="#00000071";
@@ -33,36 +78,3 @@ function cambiar_fondo_q(x) {
     }
     return false;
 }
-
-let correctAnswers = 0;
-let b = 6;
-
-function checkAnswer() {
-    let answerb = document.getElementById('answer-b');
-    let answerd = document.getElementById('answer-d');
-    let answerp = document.getElementById('answer-p');
-    let answerq = document.getElementById('answer-q');
-    if (answerb === b) {
-    //   document.getElementById('result').textContent = '¡Correcto!';
-      correctAnswers++;
-      alert("¡Correcto!");
-      if (correctAnswers === 3) {
-        // Avanzar a la siguiente página
-        alert("Has completado todos los ejercicios de la letra 'b'.");
-        window.location.href = '../menuEjercicios.html';
-      } else {
-        // Avanzar a la siguiente palabra
-        currentWord = words[Math.floor(Math.random() * words.length)];
-        hiddenWord = currentWord.word.replace(/[bdpq]/g, '_');
-        document.getElementById('word').textContent = hiddenWord;
-        document.getElementById('answer').value = '';
-        document.getElementById('result').textContent = '';
-
-        // Actualizar imagen y sonido
-        document.getElementById('image').src = currentWord.image;
-        document.getElementById('audio').src = currentWord.audio;
-      }
-    } else {
-      alert("Incorrecto, intenta de nuevo");
-    }
-  }

@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../../img/rex.gif" type="image/x-icon" />
   </head>
   <body>
-    <script src="../../js/evaluacion/leones.js"></script>
 
     <header>
       <div class="contenedor-logo">
@@ -68,26 +67,27 @@
         <div class="letras">
             <div class="letras1">
                 <div class="letra-b">
-                    <p>Cuantas b hay:</p> 
-                    <input type="number" id="answer-b" placeholder="Escribe la palabra">
+                    <b><p>Cuantas b hay:</p></b>
+                    <input type="number" id="answerb" placeholder="Escribe la palabra">
                 </div>
                 <div class="letra-d">
-                    <p>Cuantas d hay:</p>
-                    <input type="number" id="answer-d" placeholder="Escribe la palabra">
+                  <b><p>Cuantas d hay:</p></b>
+                    <input type="number" id="answerd" placeholder="Escribe la palabra">
                 </div>
             </div>
             <div class="letras2">
                 <div class="letra-p">
-                    <p>Cuantas p hay:</p> 
-                    <input type="number" id="answer-p" placeholder="Escribe la palabra">
+                  <b><p>Cuantas p hay:</p></b> 
+                    <input type="number" id="answerp" placeholder="Escribe la palabra">
                 </div>
                 <div class="letra-q">
-                    <p>Cuantas q hay:</p>
-                    <input type="number" id="answer-q" placeholder="Escribe la palabra">
+                  <b><p>Cuantas q hay:</p></b>
+                  <input type="number" id="answerq" placeholder="Escribe la palabra">
                 </div>
             </div>
             <div class="verificar">
                 <button id="submit" onclick="checkAnswer()">Comprobar</button>
+                <div id="result"></div>
             </div>
         </div>
       </div>
@@ -95,10 +95,14 @@
       <div class="marcador">
         <img src="../../img/puntaje-leon.png" alt="">
         <br>
-        <p id="puntaje"></p>
+        <b><p id="puntajeb"></p></b>
+        <b><p id="puntajed"></p></b>
+        <b><p id="puntajep"></p></b>
+        <b><p id="puntajeq"></p></b>
       </div>
     </section>
 
+    <script src="../../js/evaluacion/leones.js"></script>
 
   </body>
 </html>
