@@ -199,15 +199,23 @@ section{
 }
 .letter-perezoso{
     background-image: url("../../img/perezoso.png");
-    top: 87%;
-    left: 30%;
+    top: 50%;
+    left: 35%;
 }
 .letter-pez{
     height: 15%;
     width: 9%;
     background-image: url("../../img/pez.png");
     top: 87%;
-    left: 40%;
+    left: 38%;
+}
+
+.letter-quesito{
+    height: 15%;
+    width: 9%;
+    background-image: url("../../img/quesito.png");
+    top: 87%;
+    left: 38%;
 }
 .contenedor .botones{
     display: flex;

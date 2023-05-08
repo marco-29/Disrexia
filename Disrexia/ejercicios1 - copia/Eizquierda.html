@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio Lateralidad</title>
+    <link rel="stylesheet" href="../css/estilo-Elateralidad.css" />
+    <link rel="shortcut icon" href="../img/rex.gif" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-logo">
+        <a class="logo" href="../index.html">
+          <img src="../img/logo.png" alt="" />
+        </a>
+        <div class="titu">
+          <img src="../img/titulo-ejercicios.png" alt="" width="200%">
+        </div>
+      </div>
+      <nav>
+        <div class="boton-lecciones">
+            <a href="../lecciones/menuLecciones.html"> 
+              <img class="lecciones" src="../img/btn-lecciones.png" alt="">
+            </a>
+        </div>
+        <div class="boton-ejercicios">
+          <a href="menuEjercicios.html">
+            <img class="lecciones" src="../img/btn-ejercicio.png" alt="">
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="contenedor">
+      <div class="contenedor-ejercicio">
+        <img src="../imge/fondo1.png" alt="Lateralidad" class="fondo"  width="15%">
+        <div class="contenedor-instrucciones">
+          <h1>Identficando izquierda y derecha</h1>
+          <img id="imagen-mano-izquierda" src="../imge/izq1.png" alt="Imagen de mano izquierda" class="lateralidad" onclick="playSound('izquierda')">
+          <!-- <audio id="sonido-izquierda" src="audios1/izquierda.mp3"></audio> -->
+          <img id="imagen-mano-derecha" src="../imge/der1.png" alt="Imagen de mano derecha" class="lateralidad" onclick="reproducirSonidoDerecha()">
+          <audio id="sonido-derecha" src="sonidos/derecha.mp3"></audio>
+          <br>
+          <div class="botones">
+          <button id="izquierda">IZQUIERDA</button>
+          <button id="derecha">DERECHA</button>
+          </div>
+          <p id="respuesta"></p>
+        </div>
+      </div>
+     
+    </div>
+
+    <script>
+      function playSound(audio) {
+      var audio = new Audio('audios1/' + audio + '.mp3');
+      audio.play();
+    }
+
+      function reproducirSonidoIzquierda() {
+        const sonidoIzquierda = document.getElementById("sonido-izquierda");
+        sonidoIzquierda.currentTime = 0;
+        sonidoIzquierda.play();
+      }
+  
+      function reproducirSonidoDerecha() {
+        const sonidoDerecha = document.getElementById("sonido-derecha");
+        sonidoDerecha.currentTime = 0;
+        sonidoDerecha.play();
+      }
+      
+      let contadorRespuestasCorrectas = 0;
+      
+      const btnIzquierda = document.getElementById('izquierda');
+      const btnDerecha = document.getElementById('derecha');
+      const respuesta = document.getElementById('respuesta');
+      const imagenManoIzquierda = document.getElementById('imagen-mano-izquierda');
+      const imagenManoDerecha = document.getElementById('imagen-mano-derecha');
+      
+      const imagenesMano = [
+        '../imge/izq1.png',
+        '../imge/der1.png'
+      ];
+  
+      function mostrarManoAleatoria() {
+        const indice = Math.floor(Math.random() * imagenesMano.length);
+        const mano = imagenesMano[indice];
+        if (mano === '../imge/izq1.png') {
+          imagenManoIzquierda.style.display = 'block';
+          imagenManoDerecha.style.display = 'none';
+        } else {
+          imagenManoIzquierda.style.display = 'none';
+          imagenManoDerecha.style.display = 'block';
+        }
+        return indice; // devuelve el índice de la imagen mostrada
+      }
+  
+      const respuestaCorrecta = {
+        0: 'izquierda', // imagen de mano izquierda
+        1: 'derecha' // imagen de mano derecha
+      };
+  
+      function verificarRespuesta(respuestaUsuario, indiceImagen) {
+        const respuestaEsperada = respuestaCorrecta[indiceImagen];
+        if (respuestaUsuario === respuestaEsperada) {
+          respuesta.innerHTML = 'Respuesta: ¡Correcto!';
+          contadorRespuestasCorrectas++; // incrementar el contador de respuestas correctas
+          if (contadorRespuestasCorrectas === 3) {
+            window.location.href = '../menuEjercicios.html'; // redireccionar a otro archivo
+  
+        window.location.href = '../menuEjercicios.html'; // redireccionar a otro archivo HTML
+      }
+    } else {
+      respuesta.innerHTML = 'Respuesta: Incorrecto. Intentalo de nuevo.';
+    }
+  }
+  
+  let indiceImagenActual = mostrarManoAleatoria();
+  
+  btnIzquierda.addEventListener('click', function() {
+    verificarRespuesta('izquierda', indiceImagenActual);
+    indiceImagenActual = mostrarManoAleatoria(); // mostramos una nueva imagen aleatoria
+  });
+  
+  btnDerecha.addEventListener('click', function() {
+    verificarRespuesta('derecha', indiceImagenActual);
+    indiceImagenActual = mostrarManoAleatoria(); // mostramos una nueva imagen aleatoria
+  });
+  
+    </script>
+
+  </body>
+</html>
