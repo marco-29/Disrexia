@@ -67,12 +67,27 @@
 
         <div class="letras">
             <div class="letras1">
-                <p>Cuantas b hay:</p>
-                <p>Cuantas d hay:</p>
+                <div class="letra-b">
+                    <p>Cuantas b hay:</p> 
+                    <input type="number" id="answer-b" placeholder="Escribe la palabra">
+                </div>
+                <div class="letra-d">
+                    <p>Cuantas d hay:</p>
+                    <input type="number" id="answer-d" placeholder="Escribe la palabra">
+                </div>
             </div>
             <div class="letras2">
-                <p>Cuantas p hay:</p>
-                <p>Cuantas q hay:</p>
+                <div class="letra-p">
+                    <p>Cuantas p hay:</p> 
+                    <input type="number" id="answer-p" placeholder="Escribe la palabra">
+                </div>
+                <div class="letra-q">
+                    <p>Cuantas q hay:</p>
+                    <input type="number" id="answer-q" placeholder="Escribe la palabra">
+                </div>
+            </div>
+            <div class="verificar">
+                <button id="submit" onclick="checkAnswer()">Comprobar</button>
             </div>
         </div>
       </div>
