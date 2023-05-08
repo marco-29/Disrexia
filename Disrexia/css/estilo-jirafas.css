@@ -106,106 +106,106 @@ section{
 }
 .letter-ardilla {
     
-    background-image: url("../../img/ardilla.png");
+    background-image: url("../img/ardilla.png");
     top: 80%;
     left: 68%;
 }
 .letter-ballena{
-    background-image: url("../../img/ballena.png");
+    background-image: url("../img/ballena.png");
     top: 80%;
     left: 48%;
 }
 .letter-bici{
     height: 18%;
-    background-image: url("../../img/bici.png");
+    background-image: url("../img/bici.png");
     top: 65%;
     left: 8%;
 }
 .letter-botas{
-    background-image: url("../../img/botas.png");
+    background-image: url("../img/botas.png");
     top: 67%;
     left: -2%;
 }
 .letter-buho1{
-    background-image: url("../../img/buho1.png");
+    background-image: url("../img/buho1.png");
     top: 27%;
     left: 68%;
 }
 .letter-cocodrilo{
-    background-image: url("../../img/cocodrilo.png");
+    background-image: url("../img/cocodrilo.png");
     top: 80%;
     left: 4%;
 }
 .letter-caballo{
-    background-image: url("../../img/caballo.png");
+    background-image: url("../img/caballo.png");
     top: 67%;
     left: 60%;
 }
 .letter-delfin{
-    background-image: url("../../img/delfin.png");
+    background-image: url("../img/delfin.png");
     top: 75%;
     left: 20%;
 }
 .letter-dados1{
-    background-image: url("../../img/dados1.png");
+    background-image: url("../img/dados1.png");
     top: 25%;
     left: 55%;
 }
 .letter-durazno{
-    background-image: url("../../img/durazno.png");
+    background-image: url("../img/durazno.png");
     height: 16%;
     top: 30%;
     left: 17%;
 }
 .letter-dinos{
-    background-image: url("../../img/dinos.png");
+    background-image: url("../img/dinos.png");
     
     top: 40%;
     left: 5%;
 }
 .letter-elefant{
-    background-image: url("../../img/elefant.png");
+    background-image: url("../img/elefant.png");
     
     top: 65%;
     left: 35%;
 }
 .letter-foca{
-    background-image: url("../../img/foca.png");
+    background-image: url("../img/foca.png");
     
     top: 80%;
     left: 15%;
 }
 .letter-jirafales{
-    background-image: url("../../img/jirafales.png");
+    background-image: url("../img/jirafales.png");
     top: 60%;
     left: 47%;
 }
 .letter-koala{
-    background-image: url("../../img/koala.png");
+    background-image: url("../img/koala.png");
     top: 50%;
     left: 15%;
 }
 .letter-mapache{
-    background-image: url("../../img/mapache.png");
+    background-image: url("../img/mapache.png");
     top: 50%;
     left: 25%;
 }
 .letter-patos{
     height: 15%;
     width: 9%;
-    background-image: url("../../img/patos.png");
+    background-image: url("../img/patos.png");
     top: 87%;
     left: 30%;
 }
 .letter-perezoso{
-    background-image: url("../../img/perezoso.png");
+    background-image: url("../img/perezoso.png");
     top: 50%;
     left: 35%;
 }
 .letter-pez{
     height: 15%;
     width: 9%;
-    background-image: url("../../img/pez.png");
+    background-image: url("../img/pez.png");
     top: 87%;
     left: 38%;
 }
@@ -213,7 +213,7 @@ section{
 .letter-quesito{
     height: 15%;
     width: 9%;
-    background-image: url("../../img/quesito.png");
+    background-image: url("../img/quesito.png");
     top: 87%;
     left: 38%;
 }
