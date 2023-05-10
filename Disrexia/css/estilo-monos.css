@@ -82,7 +82,7 @@ section{
     border: solid 1px;
     width: 950px;
     height: 540px;
-    background-image: url(../img/fondo-monos2.jpg);
+    background-image: url(../img/leon-fondo.png);
     background-size: cover;
     display: flex;
     flex-direction: column;
